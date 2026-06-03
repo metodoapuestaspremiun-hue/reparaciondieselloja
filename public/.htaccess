@@ -1,0 +1,7 @@
+# Configuración PHP
+php_value max_execution_time 60
+php_value memory_limit 128M
+
+# Headers de seguridad
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
