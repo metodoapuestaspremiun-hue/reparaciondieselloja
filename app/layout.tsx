@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   generator: "Next.js",
   icons: {
     icon: "/images/favicon.ico"
+  },
+  verification: {
+    google: "Mberw-THKvHezPpM2KjvZSZhe7VUR-hU6fdadYHJKT0"
   }
 }
 
