@@ -5,7 +5,7 @@ export default function TrustSection() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">La Confianza que Impulsa tu Camino</h2>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            En Automotriz Chávez, entendemos la importancia vital de tu motor. Es el corazón de tu vehículo y el motor
+            En Mecánica Loja, entendemos la importancia vital de tu motor. Es el corazón de tu vehículo y el motor
             de tu negocio. Por eso, nuestro compromiso es brindarte no solo una reparación, sino la tranquilidad de
             saber que tu inversión está en manos de expertos.
           </p>

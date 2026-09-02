@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Menu, X, Phone } from "lucide-react"
 
-export default function Navigation() {
+export default function Navigation({ brandName = "Automotriz Chávez" }: { brandName?: string } = {}) {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
 
@@ -45,7 +45,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-3">
           <Link href="/" className="flex items-center">
             <div>
-              <h1 className="text-xl font-bold text-red-500">Automotriz Chávez</h1>
+              <h1 className="text-xl font-bold text-red-500">{brandName}</h1>
               <p className="text-sm text-gray-300">Expertos en Motores</p>
             </div>
           </Link>

@@ -24,7 +24,7 @@ export default function ServiceProcess() {
           Nuestros servicios para reparación de motor en Loja
         </h2>
         <p className="text-lg text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-          Sabemos que su vehículo liviano o pesado, su flota o maquinaria industrial representan el motor de su negocio, es por eso que en Automotriz Chávez nuestro objetivo es reparar, dar mantenimiento y asegurar la máxima vida útil de su motor en la región.
+          Sabemos que su vehículo liviano o pesado, su flota o maquinaria industrial representan el motor de su negocio, es por eso que en Mecánica Loja nuestro objetivo es reparar, dar mantenimiento y asegurar la máxima vida útil de su motor en la región.
         </p>
 
         <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:flex-wrap gap-8 max-w-5xl mx-auto">

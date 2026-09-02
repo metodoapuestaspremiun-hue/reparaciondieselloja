@@ -164,14 +164,14 @@ export default function ContactSection() {
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Nuestra Ubicación</h3>
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d969.8684542012387!2d-79.21859029634184!3d-3.946464106615077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb496f7af5fd8b%3A0x34d565f26b351b72!2sAUTOMOTRIZ%20CHAVEZ!5e0!3m2!1ses-419!2sec!4v1759869410200!5m2!1ses-419!2sec"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d969.8684542012387!2d-79.21859029634184!3d-3.946464106615077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb496f7af5fd8b%3A0x34d565f26b351b72!2sMecanica%20Loja!5e0!3m2!1ses-419!2sec!4v1759869410200!5m2!1ses-419!2sec"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Ubicación Automotriz Chávez"
+              title="Ubicación Mecánica Loja"
             ></iframe>
           </div>
           <div className="text-center mt-4">

@@ -14,7 +14,7 @@ export default function VideoSection() {
               muted 
               playsInline 
               className="w-full h-full object-cover"
-              title="Especialistas en Reparación de Motores Diesel - Automotriz Chávez"
+              title="Especialistas en Reparación de Motores Diesel - Mecánica Loja"
             >
               <source src="/images/video.mp4" type="video/mp4" />
               Tu navegador no soporta el elemento de video.

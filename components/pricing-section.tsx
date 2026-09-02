@@ -184,7 +184,7 @@ export default function PricingSection() {
 
         <div className="text-center">
           <p className="text-gray-300 mb-6 leading-relaxed max-w-3xl mx-auto">
-            En Automotriz Chávez, entendemos la inversión que representa la reparación de un motor. Por eso, te
+            En Mecánica Loja, entendemos la inversión que representa la reparación de un motor. Por eso, te
             ofrecemos un esquema de pago flexible: una entrada para iniciar, un pago durante el proceso de arreglo y el
             saldo al momento de la contraentrega de tu vehículo con el motor como nuevo. ¡Transparencia y facilidades
             para tu tranquilidad!

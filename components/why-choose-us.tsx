@@ -30,13 +30,13 @@ export default function WhyChooseUs() {
             <div className="flex items-center space-x-4">
               <Image
                 src="/images/logo.jpg"
-                alt="Automotriz Chávez Logo"
+                alt="Mecánica Loja Logo"
                 width={80}
                 height={80}
                 className="rounded-lg"
               />
               <div>
-                <h3 className="text-xl font-bold text-red-500">Automotriz Chávez</h3>
+                <h3 className="text-xl font-bold text-red-500">Mecánica Loja</h3>
                 <p className="text-gray-600">Tu taller de confianza en Loja</p>
               </div>
             </div>

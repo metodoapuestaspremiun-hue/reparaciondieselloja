@@ -13,21 +13,21 @@ export default function TestimonialsSection() {
       name: "Luis R. - Transportista (Loja)",
       title: "El Único Taller de Alta Especialización",
       testimonial:
-        "Tuve un problema serio con mi motor diésel y busqué en toda la región. Encontré el nivel de especialización que tiene Automotriz Chávez aquí en Loja. Repararon mi motor en tiempo récord y el servicio es garantizado. ¡Vale la pena confiar en los expertos de Loja!",
+        "Tuve un problema serio con mi motor diésel y busqué en toda la región. Encontré el nivel de especialización que tiene Mecánica Loja aquí en Loja. Repararon mi motor en tiempo récord y el servicio es garantizado. ¡Vale la pena confiar en los expertos de Loja!",
       image: "/images/carlos.jpg",
     },
     {
       name: "Patricia T. - Empresaria (Loja)",
       title: "Excelente Servicio para Flotas",
       testimonial:
-        "Mi empresa de transporte confía en Automotriz Chávez desde hace años. Su programa de mantenimiento preventivo nos ha ahorrado miles en reparaciones inesperadas. ",
+        "Mi empresa de transporte confía en Mecánica Loja desde hace años. Su programa de mantenimiento preventivo nos ha ahorrado miles en reparaciones inesperadas. ",
       image: "/images/maria.jpg",
     },
     {
       name: "Jorge M. - Contratista (Loja)",
       title: "Expertos en Maquinaria Pesada",
       testimonial:
-        "Trabajo en construcción y necesito reparación urgente para mis equipos diésel. Encontré en Automotriz Chávez la experiencia y el respaldo que no hallé en otros lugares. Confío en su trabajo porque sé que mi maquinaria siempre está en buenas manos en su taller del Parque Industrial de Loja.",
+        "Trabajo en construcción y necesito reparación urgente para mis equipos diésel. Encontré en Mecánica Loja la experiencia y el respaldo que no hallé en otros lugares. Confío en su trabajo porque sé que mi maquinaria siempre está en buenas manos en su taller del Parque Industrial de Loja.",
       image: "/images/roberto.jpg",
     },
   ]

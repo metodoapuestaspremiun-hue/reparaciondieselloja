@@ -8,7 +8,7 @@ import { Inter } from "next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Automotriz Chavez",
+  title: "Mecánica Loja",
   description: "Taller especializado en reparación y mantenimiento de vehículos en Loja",
   generator: "Next.js",
   icons: {

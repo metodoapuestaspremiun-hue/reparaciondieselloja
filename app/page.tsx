@@ -12,10 +12,140 @@ import FAQSection from "@/components/faq-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Mecánica Loja | Especialistas en Reparación de Motores Diésel",
+  description: "Taller mecánico líder en Loja, Ecuador. Más de 35 años de experiencia en reparación integral de motores diésel, vehículos livianos, pesados, maquinaria y mantenimiento preventivo de flotas.",
+  keywords: [
+    "Mecánica Loja",
+    "taller mecanico loja",
+    "reparacion de motores diesel loja",
+    "mantenimiento de motores loja",
+    "mecanica de vehiculos pesados loja",
+    "taller automotriz parque industrial loja",
+    "diagnostico computarizado motor loja"
+  ],
+  alternates: {
+    canonical: "https://reparaciondieselloja.com",
+  },
+  openGraph: {
+    title: "Mecánica Loja | Especialistas en Reparación de Motores Diésel",
+    description: "Taller mecánico líder en Loja, Ecuador. Especialistas con más de 35 años en reparación de motores diésel y gasolina.",
+    url: "https://reparaciondieselloja.com",
+    siteName: "Mecánica Loja",
+    locale: "es_EC",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mecánica Loja | Especialistas en Reparación de Motores Diésel",
+    description: "Taller mecánico líder en Loja. Especialistas en reparación de motores diésel y pesados."
+  }
+}
+
 export default function HomePage() {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Mecánica Loja",
+      "alternateName": ["Taller Mecánico Loja", "Mecánica Diésel Loja"],
+      "url": "https://reparaciondieselloja.com",
+      "description": "Taller mecánico líder en Loja especializado en reparación integral y reconstrucción de motores diésel y a gasolina para vehículos livianos, camionetas, pesados y flotas comerciales.",
+      "telephone": "+593992797349",
+      "email": "c.havez-321@gmail.com",
+      "priceRange": "$$",
+      "image": "https://reparaciondieselloja.com/images/hero.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Raleigh entre Nueva York y California, Parque Industrial",
+        "addressLocality": "Loja",
+        "addressRegion": "Loja",
+        "postalCode": "110150",
+        "addressCountry": "EC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -3.946464,
+        "longitude": -79.218590
+      },
+      "hasMap": "https://maps.app.goo.gl/eKouqju914ZqKHmf8",
+      "areaServed": {
+        "@type": "City",
+        "name": "Loja"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la especialidad principal de Mecánica Loja?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nuestra especialidad es la reparación y reconstrucción integral de motores diésel, abarcando todas las marcas y modelos. También somos expertos en motores a gasolina, atendiendo prioritariamente vehículos pesados, flotas y maquinaria industrial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué elegirnos sobre otros talleres de reparación de motores en Loja?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La diferencia está en la experiencia de más de 35 años y nuestra ubicación estratégica en el Parque Industrial de Loja. Garantizamos soluciones robustas y duraderas, utilizando Diagnóstico Computarizado para asegurar la precisión en cada reparación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo manejan el alto costo de una reparación mayor de motor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para tu tranquilidad y mejor flujo de caja, utilizamos un esquema de pago transparente por fases. El costo se divide en tres etapas (Inicial, Avance/Repuestos, y Contraentrega), ligando el pago al progreso real del trabajo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tecnología utilizan para diagnosticar fallas en motores modernos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usamos equipos de Diagnóstico Computarizado de última generación. Esto es esencial para identificar con precisión fallas en los sistemas electrónicos y de inyección (Common Rail) de los motores diésel modernos, minimizando el tiempo de inactividad de tu vehículo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tipo de garantía ofrecen en la reparación de un motor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ofrecemos una garantía por escrito en todos los trabajos mayores. Este respaldo técnico asegura que tu vehículo salga de nuestro taller con la tranquilidad de un servicio profesional y duradero que cubre toda la Región Sur."
+          }
+        }
+      ]
+    }
+  ]
+
   return (
     <main className="min-h-screen">
-      <Navigation />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Navigation brandName="Mecánica Loja" />
       <HeroSection />
       <TrustSection />
       <VideoSection />
@@ -27,7 +157,7 @@ export default function HomePage() {
       <PricingSection />
       <FAQSection />
       <ContactSection />
-      <Footer />
+      <Footer brandName="Mecánica Loja" />
     </main>
   )
 }

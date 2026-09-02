@@ -8,7 +8,7 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "¿Cuál es la especialidad principal de Automotriz Chávez en Loja?",
+      question: "¿Cuál es la especialidad principal de Mecánica Loja?",
       answer:
         "Nuestra especialidad es la reparación y reconstrucción integral de motores diésel, abarcando todas las marcas y modelos. También somos expertos en motores a gasolina, atendiendo prioritariamente vehículos pesados, flotas y maquinaria industrial.",
     },

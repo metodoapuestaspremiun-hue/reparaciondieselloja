@@ -30,7 +30,7 @@ export default function GuaranteesSection() {
             Garantía de Calidad en Toda la Región Sur
           </h2>
           <p className="text-lg text-white max-w-3xl mx-auto">
-            En Automotriz Chávez, somos el taller referente para la reparación de motores diésel en Loja. Nuestro servicio va más allá del taller; es un compromiso de confianza y respaldo técnico. Garantizamos la calidad de nuestro trabajo para todos los clientes que nos visitan. Tu satisfacción es nuestra mejor garantía.
+            En Mecánica Loja, somos el taller referente para la reparación de motores diésel en Loja. Nuestro servicio va más allá del taller; es un compromiso de confianza y respaldo técnico. Garantizamos la calidad de nuestro trabajo para todos los clientes que nos visitan. Tu satisfacción es nuestra mejor garantía.
           </p>
         </div>
 
