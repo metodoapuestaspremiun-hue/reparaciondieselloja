@@ -8,14 +8,14 @@ export default function ContactSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Atención en Toda la Región Sur</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Ubicados estratégicamente en Raleigh entre Nueva York y California, Loja, atendemos a clientes de toda la región sur del Ecuador.
+            Ubicados en Juan José Peña y Mercadillo, Loja, atendemos a clientes de toda la región sur del Ecuador.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/593992797349" className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+            <a href="https://wa.me/593983237491" className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
               <MessageCircle className="w-5 h-5" />
               WhatsApp
             </a>
-            <a href="tel:+593992797349" className="inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+            <a href="tel:+593983237491" className="inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
               <Phone className="w-5 h-5" />
               Llamar Ahora
             </a>
@@ -34,7 +34,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Llámanos</h4>
-                      <a href="tel:+593992797349" className="text-gray-600 hover:text-red-500">+593 99 279 7349</a>
+                      <a href="tel:+593983237491" className="text-gray-600 hover:text-red-500">098 323 7491</a>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -44,10 +44,10 @@ export default function ContactSection() {
                     <div className="min-w-0">
                       <h4 className="font-semibold">Correo Electrónico</h4>
                       <a 
-                        href="mailto:email@reparaciondieselloja.com" 
+                        href="mailto:negocios@cesarreyesjaramillo.com" 
                         className="text-gray-600 hover:text-red-500 break-all text-sm sm:text-base"
                       >
-                        email@reparaciondieselloja.com
+                        negocios@cesarreyesjaramillo.com
                       </a>
                     </div>
                   </div>
@@ -57,7 +57,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Ubicación</h4>
-                      <p className="text-gray-600">Raleigh entre Nueva York y California, Loja</p>
+                      <p className="text-gray-600">Juan José Peña y Mercadillo, Loja</p>
                     </div>
                   </div>
                 </div>
@@ -82,9 +82,9 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Ubicación Estratégica</h4>
-                  <p className="text-gray-600 text-sm mb-1">Raleigh entre Nueva York y California, Loja</p>
+                  <p className="text-gray-600 text-sm mb-1">Juan José Peña y Mercadillo, Loja</p>
                   <a
-                    href="https://maps.app.goo.gl/eKouqju914ZqKHmf8"
+                    href="https://maps.app.goo.gl/gSXzUQ1ANZbPvURg9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-red-500 hover:text-red-600 text-xs block mt-1"
@@ -100,8 +100,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Atención Inmediata</h4>
-                  <a href="tel:+593992797349" className="text-gray-600 hover:text-red-500 text-sm">
-                    +593 99 279 7349
+                  <a href="tel:+593983237491" className="text-gray-600 hover:text-red-500 text-sm">
+                    098 323 7491
                   </a>
                   <p className="text-gray-500 text-xs">Lunes a Sábado: 8:00 AM - 6:00 PM</p>
                 </div>
@@ -114,12 +114,12 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold text-gray-900">WhatsApp</h4>
                   <a
-                    href="https://wa.me/593992797349"
+                    href="https://wa.me/593983237491"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-red-500 text-sm"
                   >
-                    +593 99 279 7349
+                    098 323 7491
                   </a>
                 </div>
               </div>
@@ -133,8 +133,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Email</h4>
-                  <a href="mailto:c.havez-321@gmail.com" className="text-gray-600 hover:text-red-500 text-sm">
-                    c.havez-321@gmail.com
+                  <a href="mailto:negocios@cesarreyesjaramillo.com" className="text-gray-600 hover:text-red-500 text-sm break-all">
+                    negocios@cesarreyesjaramillo.com
                   </a>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold text-gray-900">Facebook</h4>
                   <a
-                    href="https://www.facebook.com/profile.php?id=100064359630754"
+                    href="https://www.facebook.com/CesarReyes.Pymes"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-red-500 text-sm"
@@ -164,7 +164,7 @@ export default function ContactSection() {
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Nuestra Ubicación</h3>
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d969.8684542012387!2d-79.21859029634184!3d-3.946464106615077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb496f7af5fd8b%3A0x34d565f26b351b72!2sMecanica%20Loja!5e0!3m2!1ses-419!2sec!4v1759869410200!5m2!1ses-419!2sec"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.1245789123!2d-79.206275!3d-3.997235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwNTknNTAuMCJTIDc5wrAxMicxNi4wIlc!5e0!3m2!1ses-419!2sec!4v1710000000000!5m2!1ses-419!2sec"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -176,7 +176,7 @@ export default function ContactSection() {
           </div>
           <div className="text-center mt-4">
             <a
-              href="https://maps.app.goo.gl/eKouqju914ZqKHmf8"
+              href="https://maps.app.goo.gl/gSXzUQ1ANZbPvURg9"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-red-500 hover:text-red-600 font-medium"

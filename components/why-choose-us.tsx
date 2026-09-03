@@ -29,11 +29,11 @@ export default function WhyChooseUs() {
 
             <div className="flex items-center space-x-4">
               <Image
-                src="/images/logo.jpg"
+                src="/nuevas/mecanica_en_loja_logo.webp"
                 alt="Mecánica Loja Logo"
                 width={80}
                 height={80}
-                className="rounded-lg"
+                className="rounded-lg object-contain"
               />
               <div>
                 <h3 className="text-xl font-bold text-red-500">Mecánica Loja</h3>
@@ -44,11 +44,11 @@ export default function WhyChooseUs() {
 
           <div className="relative">
             <Image
-              src="/images/garantia.jpg"
-              alt="Taller profesional"
+              src="/nuevas/mecanica_en_loja_hero.webp"
+              alt="Taller profesional Mecánica Loja"
               width={600}
               height={400}
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-xl object-cover"
             />
           </div>
         </div>

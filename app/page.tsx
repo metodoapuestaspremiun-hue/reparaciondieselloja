@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "reparacion de motores diesel loja",
     "mantenimiento de motores loja",
     "mecanica de vehiculos pesados loja",
-    "taller automotriz parque industrial loja",
+    "taller mecanico juan jose peña loja",
     "diagnostico computarizado motor loja"
   ],
   alternates: {
@@ -53,13 +53,13 @@ export default function HomePage() {
       "alternateName": ["Taller Mecánico Loja", "Mecánica Diésel Loja"],
       "url": "https://reparaciondieselloja.com",
       "description": "Taller mecánico líder en Loja especializado en reparación integral y reconstrucción de motores diésel y a gasolina para vehículos livianos, camionetas, pesados y flotas comerciales.",
-      "telephone": "+593992797349",
-      "email": "c.havez-321@gmail.com",
+      "telephone": "+593983237491",
+      "email": "negocios@cesarreyesjaramillo.com",
       "priceRange": "$$",
-      "image": "https://reparaciondieselloja.com/images/hero.jpg",
+      "image": "https://reparaciondieselloja.com/nuevas/mecanica_en_loja_logo.webp",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Raleigh entre Nueva York y California, Parque Industrial",
+        "streetAddress": "Juan José Peña y Mercadillo",
         "addressLocality": "Loja",
         "addressRegion": "Loja",
         "postalCode": "110150",
@@ -67,10 +67,10 @@ export default function HomePage() {
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": -3.946464,
-        "longitude": -79.218590
+        "latitude": -3.997235,
+        "longitude": -79.206275
       },
-      "hasMap": "https://maps.app.goo.gl/eKouqju914ZqKHmf8",
+      "hasMap": "https://maps.app.goo.gl/gSXzUQ1ANZbPvURg9",
       "areaServed": {
         "@type": "City",
         "name": "Loja"
@@ -108,7 +108,7 @@ export default function HomePage() {
           "name": "¿Por qué elegirnos sobre otros talleres de reparación de motores en Loja?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La diferencia está en la experiencia de más de 35 años y nuestra ubicación estratégica en el Parque Industrial de Loja. Garantizamos soluciones robustas y duraderas, utilizando Diagnóstico Computarizado para asegurar la precisión en cada reparación."
+            "text": "La diferencia está en la experiencia de más de 35 años y nuestra ubicación en Juan José Peña y Mercadillo, Loja. Garantizamos soluciones robustas y duraderas, utilizando Diagnóstico Computarizado para asegurar la precisión en cada reparación."
           }
         },
         {

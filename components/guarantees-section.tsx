@@ -6,7 +6,7 @@ export default function GuaranteesSection() {
       icon: Award,
       title: "Años de Experiencia en Loja",
       description:
-        "Más de tres décadas de experiencia especializada en reparación de motores diésel y servicio a flotas. Nuestro taller está ubicado estratégicamente en el Parque Industrial de Loja.",
+        "Más de tres décadas de experiencia especializada en reparación de motores diésel y servicio a flotas. Nuestro taller está ubicado en Juan José Peña y Mercadillo, Loja.",
     },
     {
       icon: Shield,

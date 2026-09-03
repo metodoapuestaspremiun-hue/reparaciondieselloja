@@ -9,24 +9,24 @@ export default function Footer({ brandName = "Automotriz Chávez" }: { brandName
           {/* Logo y nombre */}
           <div className="flex items-center space-x-3 mb-4">
             <Image 
-              src="/images/logo.jpg" 
+              src="/nuevas/mecanica_en_loja_logo.webp" 
               alt={brandName} 
               width={50} 
               height={50} 
-              className="rounded-lg" 
+              className="rounded-lg object-contain" 
             />
             <h3 className="text-xl font-bold text-red-500">{brandName}</h3>
           </div>
           
           {/* Descripción */}
           <p className="text-gray-300 max-w-2xl mb-6">
-            Ubicanos en Raleigh entre Nueva York y California, Loja. Especialistas en reparación de motores diésel para vehículos pesados, camionetas y maquinaria industrial.
+            Ubícanos en Juan José Peña y Mercadillo, Loja. Especialistas en reparación de motores diésel para vehículos pesados, camionetas y maquinaria industrial.
           </p>
           
           {/* Botones de contacto */}
           <div className="flex flex-wrap justify-center gap-4 mb-6">
             <a
-              href="https://wa.me/593992797349"
+              href="https://wa.me/593983237491"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors"
@@ -35,7 +35,7 @@ export default function Footer({ brandName = "Automotriz Chávez" }: { brandName
               WhatsApp
             </a>
             <a
-              href="tel:+593992797349"
+              href="tel:+593983237491"
               className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors"
             >
               <Phone className="w-5 h-5" />
@@ -47,13 +47,13 @@ export default function Footer({ brandName = "Automotriz Chávez" }: { brandName
           <div className="space-y-3 text-gray-300">
             <div className="flex items-center justify-center gap-2">
               <Phone className="w-5 h-5 text-red-500" />
-              <a href="tel:+593992797349" className="hover:text-white transition-colors">
-                +593 99 279 7349
+              <a href="tel:+593983237491" className="hover:text-white transition-colors">
+                +593 98 323 7491
               </a>
             </div>
             <div className="flex items-center justify-center gap-2">
               <MapPin className="w-5 h-5 text-red-500 flex-shrink-0" />
-              <span>Raleigh entre Nueva York y California, Loja</span>
+              <span>Juan José Peña y Mercadillo, Loja</span>
             </div>
           </div>
           

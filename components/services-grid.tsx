@@ -15,7 +15,7 @@ export default function ServicesGrid() {
       title: "REPARACIÓN INTEGRAL DE MOTORES DIÉSEL",
       description:
         "Nos especializamos en la reparación y reconstrucción de motores diésel de todas las marcas, en Loja. Tanto vehículos livianos medianos y pesados, siempre respaldado por los años de experiencia",
-      image: "/images/motor_diesel.jpg",
+      image: "/nuevas/mecanica_en_loja_reparacion.webp",
       link: "/servicios/reparacion",
       cta: "SOLICITAR CITA DE REPARACIÓN"
     },
@@ -31,7 +31,7 @@ export default function ServicesGrid() {
       title: "DIAGNÓSTICO COMPUTARIZADO DE MOTOR",
       description:
         "Tecnología de punta para el diagnóstico de sistemas de motor y fallas electrónicas. Identificamos el problema rápidamente para una reparación precisa.",
-      image: "/images/motor_pesados.jpg",
+      image: "/nuevas/mecanica_en_loja_diagnostico.webp",
       link: "/servicios/diagnostico",
       cta: "SOLICITAR DIAGNÓSTICO RÁPIDO"
     }

@@ -12,7 +12,14 @@ export const metadata: Metadata = {
   description: "Taller especializado en reparación y mantenimiento de vehículos en Loja",
   generator: "Next.js",
   icons: {
-    icon: "/images/favicon.ico"
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" }
+    ]
   },
   verification: {
     google: "Mberw-THKvHezPpM2KjvZSZhe7VUR-hU6fdadYHJKT0"

@@ -15,7 +15,7 @@ export default function FAQSection() {
     {
       question: "¿Por qué elegirnos sobre otros talleres de reparación de motores en Loja?",
       answer:
-        "La diferencia está en la experiencia de más de 35 años y nuestra ubicación estratégica en el Parque Industrial de Loja. Garantizamos soluciones robustas y duraderas, utilizando Diagnóstico Computarizado para asegurar la precisión en cada reparación.",
+        "La diferencia está en la experiencia de más de 35 años y nuestra ubicación en Juan José Peña y Mercadillo, Loja. Garantizamos soluciones robustas y duraderas, utilizando Diagnóstico Computarizado para asegurar la precisión en cada reparación.",
     },
     {
       question: "¿Cómo manejan el alto costo de una reparación mayor de motor?",

@@ -27,7 +27,7 @@ export default function TestimonialsSection() {
       name: "Jorge M. - Contratista (Loja)",
       title: "Expertos en Maquinaria Pesada",
       testimonial:
-        "Trabajo en construcción y necesito reparación urgente para mis equipos diésel. Encontré en Mecánica Loja la experiencia y el respaldo que no hallé en otros lugares. Confío en su trabajo porque sé que mi maquinaria siempre está en buenas manos en su taller del Parque Industrial de Loja.",
+        "Trabajo en construcción y necesito reparación urgente para mis equipos diésel. Encontré en Mecánica Loja la experiencia y el respaldo que no hallé en otros lugares. Confío en su trabajo porque sé que mi maquinaria siempre está en buenas manos en su taller de Juan José Peña y Mercadillo en Loja.",
       image: "/images/roberto.jpg",
     },
   ]
@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
     <section className="py-16 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image src="/images/taller.jpg" alt="Taller Automotriz" fill className="object-cover" />
+        <Image src="/nuevas/mecanica_en_loja_reparacion.webp" alt="Taller Mecánica Loja" fill className="object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       </div>
 

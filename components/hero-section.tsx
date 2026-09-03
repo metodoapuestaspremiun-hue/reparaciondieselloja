@@ -7,11 +7,21 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <div className="w-full h-full relative">
+          {/* Imagen Desktop */}
           <Image 
-            src="/images/hero.jpg" 
-            alt="Reparación de motores" 
+            src="/nuevas/mecanica_en_loja_hero.webp" 
+            alt="Reparación de motores en Mecánica Loja" 
             fill 
-            className="object-cover opacity-60" 
+            className="hidden sm:block object-cover opacity-60" 
+            priority 
+            sizes="100vw"
+          />
+          {/* Imagen Mobile */}
+          <Image 
+            src="/nuevas/mecanica_en_loja_hero_mobile.webp" 
+            alt="Reparación de motores en Mecánica Loja" 
+            fill 
+            className="block sm:hidden object-cover opacity-60" 
             priority 
             sizes="100vw"
           />

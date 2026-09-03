@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { Menu, X, Phone } from "lucide-react"
 
@@ -43,7 +44,14 @@ export default function Navigation({ brandName = "Automotriz Chávez" }: { brand
     <nav className="bg-gray-900 text-white shadow-lg fixed w-full z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-3">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center space-x-3">
+            <Image 
+              src="/nuevas/mecanica_en_loja_logo.webp" 
+              alt={brandName} 
+              width={42} 
+              height={42} 
+              className="rounded-lg object-contain" 
+            />
             <div>
               <h1 className="text-xl font-bold text-red-500">{brandName}</h1>
               <p className="text-sm text-gray-300">Expertos en Motores</p>
@@ -57,12 +65,12 @@ export default function Navigation({ brandName = "Automotriz Chávez" }: { brand
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+593992797349" className="flex items-center space-x-1 text-sm hover:text-red-500">
+            <a href="tel:+593983237491" className="flex items-center space-x-1 text-sm hover:text-red-500">
               <Phone size={16} />
-              <span>+593 99 279 7349</span>
+              <span>098 323 7491</span>
             </a>
             <a
-              href="https://wa.me/593992797349"
+              href="https://wa.me/593983237491"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#ec0018] hover:bg-[#c40014] px-4 py-2 rounded-lg text-sm font-medium transition-colors"
@@ -91,12 +99,12 @@ export default function Navigation({ brandName = "Automotriz Chávez" }: { brand
                 </button>
               ))}
               <div className="pt-4 border-t border-gray-700">
-                <a href="tel:+593992797349" className="flex items-center space-x-2 py-2">
+                <a href="tel:+593983237491" className="flex items-center space-x-2 py-2">
                   <Phone size={16} />
-                  <span>+593 99 279 7349</span>
+                  <span>098 323 7491</span>
                 </a>
                 <a
-                  href="https://wa.me/593992797349"
+                  href="https://wa.me/593983237491"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-[#ec0018] hover:bg-[#c40014] px-4 py-2 rounded-lg text-sm font-medium mt-2"

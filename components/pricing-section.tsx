@@ -23,7 +23,7 @@ export default function PricingSection() {
       ],
       ctaText: "Iniciar Reparación",
       ctaLink:
-        "https://wa.me/593992797349?text=Hola, quiero información sobre el pago de entrada para reparación de motor",
+        "https://wa.me/593983237491?text=Hola, quiero información sobre el pago de entrada para reparación de motor",
     },
     {
       title: "Avance",
@@ -40,7 +40,7 @@ export default function PricingSection() {
       ],
       ctaText: "Consultar Avance",
       ctaLink:
-        "https://wa.me/593992797349?text=Hola, quiero información sobre el pago de avance para reparación de motor",
+        "https://wa.me/593983237491?text=Hola, quiero información sobre el pago de avance para reparación de motor",
     },
     {
       title: "Contraentrega",
@@ -56,7 +56,7 @@ export default function PricingSection() {
         "Asesoría de mantenimiento",
       ],
       ctaText: "Finalizar Proceso",
-      ctaLink: "https://wa.me/593992797349?text=Hola, quiero información sobre el pago final para reparación de motor",
+      ctaLink: "https://wa.me/593983237491?text=Hola, quiero información sobre el pago final para reparación de motor",
     },
   ]
 
