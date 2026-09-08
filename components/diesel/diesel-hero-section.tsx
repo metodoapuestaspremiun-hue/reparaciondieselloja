@@ -6,8 +6,14 @@ export default function DieselHeroSection() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image src="/images/motor_diesel.jpg" alt="Motores Diesel" fill className="object-cover opacity-40" priority />
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <Image 
+          src="/images/diesel_hero_ia.webp" 
+          alt="Especialistas en Motores Diésel en Loja - Mecánica Loja" 
+          fill 
+          className="object-cover opacity-50" 
+          priority 
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-black/70 to-black/60"></div>
       </div>
 
       {/* Content */}
@@ -20,7 +26,7 @@ export default function DieselHeroSection() {
           Somos los especialistas en motores diésel de Loja. Ofrecemos un servicio completo de diagnóstico, mantenimiento y reparación para que tu camioneta o vehículo de carga funcione con la máxima potencia y eficiencia.
         </p>
 
-        <a href="https://wa.me/593992797349" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/593983237491?text=Hola,%20solicito%20información%20sobre%20motores%20diésel" target="_blank" rel="noopener noreferrer">
           <Button
             size="lg"
             className="bg-[#ec0018] hover:bg-[#c40014] text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"

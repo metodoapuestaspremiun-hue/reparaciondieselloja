@@ -7,13 +7,13 @@ export default function LivianosHeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/motor_liviano.jpg"
-          alt="Vehículos Livianos"
+          src="/images/livianos_hero_ia.webp"
+          alt="Mecánica Automotriz para Autos en Loja - Mecánica Loja"
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-50"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-black/70 to-black/60"></div>
       </div>
 
       {/* Content */}
@@ -26,7 +26,7 @@ export default function LivianosHeroSection() {
           Tu auto necesita el mejor cuidado. Ofrecemos un servicio integral de diagnóstico, mantenimiento y reparación de motores en Loja para que tu vehículo liviano funcione siempre a la perfección.
         </p>
 
-        <a href="https://wa.me/593992797349" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/593983237491?text=Hola,%20solicito%20servicio%20para%20vehículo%20liviano" target="_blank" rel="noopener noreferrer">
           <Button
             size="lg"
             className="bg-[#ec0018] hover:bg-[#c40014] text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"

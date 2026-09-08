@@ -25,7 +25,7 @@ export default function CamionetasFAQSection() {
     {
       question: "¿Ofrecen servicio a domicilio para camionetas?",
       answer:
-        "Sí, ofrecemos grúa las 24 horas para vehículos inmovilizados. Para mantenimientos programados, contamos con servicio de recogida y entrega en Loja. Llámanos al 0992797349 para coordinar.",
+        "Sí, ofrecemos grúa las 24 horas para vehículos inmovilizados. Para mantenimientos programados, contamos con servicio de recogida y entrega en Loja. Llámanos al 098 323 7491 para coordinar.",
     },
   ]
 

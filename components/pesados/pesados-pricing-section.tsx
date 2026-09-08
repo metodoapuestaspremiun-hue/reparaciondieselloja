@@ -21,37 +21,37 @@ export default function PesadosPricingSection() {
         "Informe detallado",
       ],
       ctaText: "Solicitar Diagnóstico",
-      ctaLink: "https://wa.me/593992797349?text=Hola, quiero un diagnóstico para mi vehículo pesado",
+      ctaLink: "https://wa.me/593983237491?text=Hola,%20quiero%20un%20diagnóstico%20para%20mi%20vehículo%20pesado",
     },
     {
-      title: "Mantenimiento Integral",
-      amount: "$350",
+      title: "Mantenimiento Preventivo Flotas",
+      amount: "$450",
       period: "desde",
       description:
-        "Programas de mantenimiento preventivo para prolongar la vida útil y eficiencia de tus motores diésel, evitando averías costosas.",
+        "Programas de mantenimiento para camiones y flotas. Minimizamos el tiempo de inactividad de tus unidades de trabajo.",
       features: [
-        "Cambio de aceite y filtros",
-        "Revisión de frenos",
-        "Sistema de refrigeración",
-        "Puesta a punto general",
+        "Cambio de aceite y filtros de alto rendimiento",
+        "Revisión de sistemas neumáticos y frenos",
+        "Engrase general y calibración",
+        "Inspección preventiva de motor"
       ],
-      ctaText: "Programar Mantenimiento",
-      ctaLink: "https://wa.me/593992797349?text=Hola, quiero programar mantenimiento para mi vehículo pesado",
+      ctaText: "Programar Flota",
+      ctaLink: "https://wa.me/593983237491?text=Hola,%20quiero%20programar%20mantenimiento%20para%20mi%20vehículo%20pesado",
     },
     {
-      title: "Reparación de Motor",
+      title: "Reconstrucción de Motor Diésel Pesado",
       amount: "$1,200",
       period: "desde",
       description:
-        "Abordamos desde reparaciones menores hasta reconstrucciones completas del motor para devolver la máxima potencia y rendimiento.",
+        "Reparación mayor para camiones, cabezales, buses y maquinaria pesada con repuestos de alta resistencia y garantía.",
       features: [
-        "Rectificación de motor",
-        "Reparación de turbo",
-        "Sistema de inyección",
-        "Garantía en mano de obra",
+        "Rectificación y encamisado de cilindros",
+        "Reparación de bomba e inyectores",
+        "Overhaul completo con repuestos originales",
+        "Garantía por escrito"
       ],
-      ctaText: "Cotizar Reparación",
-      ctaLink: "https://wa.me/593992797349?text=Hola, necesito cotización para reparación de motor pesado",
+      ctaText: "Cotizar Reparación Mayor",
+      ctaLink: "https://wa.me/593983237491?text=Hola,%20necesito%20cotización%20para%20reparación%20de%20motor%20pesado",
     },
   ]
 
@@ -182,7 +182,7 @@ export default function PesadosPricingSection() {
             incluye garantía extendida y certificación de rendimiento para trabajo pesado.
           </p>
 
-          <a href="https://wa.me/593992797349" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/593983237491?text=Hola,%20solicito%20cotización%20industrial%20para%20vehículo%20pesado" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-[#ec0018] hover:bg-[#c40014] text-white px-8 py-4 text-lg font-bold rounded-lg"

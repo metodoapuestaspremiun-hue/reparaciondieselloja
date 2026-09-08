@@ -7,26 +7,26 @@ export default function PesadosHeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/motor_pesados.jpg"
-          alt="Vehículos Pesados"
+          src="/images/pesados_hero_ia.webp"
+          alt="Mecánica de Vehículos Pesados en Loja - Mecánica Loja"
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-50"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-black/70 to-black/60"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          Especialistas en Vehículos Pesados en Loja | Automotriz Chávez
+          Especialistas en Vehículos Pesados en Loja | Mecánica Loja
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-200">
           Ofrecemos un servicio integral de reparación y mantenimiento de motores para camiones, buses y maquinaria. Confía en la experiencia que tu vehículo de trabajo necesita.
         </p>
 
-        <a href="https://wa.me/593992797349" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/593983237491?text=Hola,%20solicito%20cotización%20para%20vehículo%20pesado" target="_blank" rel="noopener noreferrer">
           <Button
             size="lg"
             className="bg-[#ec0018] hover:bg-[#c40014] text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"

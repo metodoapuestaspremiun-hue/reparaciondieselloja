@@ -23,39 +23,38 @@ export default function LivianosPricingSection() {
       ],
       ctaText: "Programar Mantenimiento",
       ctaLink:
-        "https://wa.me/593992797349?text=Hola, quiero información sobre mantenimiento de vehículo liviano",
+        "https://wa.me/593983237491?text=Hola,%20quiero%20información%20sobre%20mantenimiento%20de%20vehículo%20liviano",
     },
     {
-      title: "Diagnóstico Electrónico",
-      percentage: "40%",
-      amount: "$320",
-      period: "USD",
+      title: "Diagnóstico Computarizado",
+      amount: "$80",
+      period: "desde",
       description:
-        "Identificamos con precisión los fallos de motor, transmisión y otros sistemas, gracias a nuestra tecnología avanzada.",
+        "Identificamos fallas con escaneo electrónico y pruebas de sensores para una reparación precisa y sin gastos innecesarios.",
       features: [
-        "Escaneo computarizado",
-        "Pruebas de compresión",
-        "Análisis de rendimiento",
-        "Informe detallado",
+        "Escaneo de códigos de falla",
+        "Revisión de sensores y actuadores",
+        "Prueba de compresión de cilindros",
+        "Informe técnico con presupuesto",
       ],
       ctaText: "Solicitar Diagnóstico",
       ctaLink:
-        "https://wa.me/593992797349?text=Hola, quiero información sobre diagnóstico de vehículo liviano",
+        "https://wa.me/593983237491?text=Hola,%20quiero%20información%20sobre%20diagnóstico%20de%20vehículo%20liviano",
     },
     {
-      title: "Reparación de Motores",
-      percentage: "30%",
-      amount: "$240",
-      period: "USD",
-      description: "Devolvemos la potencia a tu motor, reparando averías y asegurando un funcionamiento eficiente y seguro.",
+      title: "Reparación de Motor",
+      amount: "$500",
+      period: "desde",
+      description:
+        "Desde cambio de empaquetadura de culata hasta reparación completa de motor con repuestos garantizados.",
       features: [
-        "Reparación de motor",
-        "Reemplazo de componentes",
-        "Pruebas de rendimiento",
-        "Garantía en servicio",
+        "Reparación y cambio de empaque de culata",
+        "Cambio de kit de distribución (banda o cadena)",
+        "Reparación de sistema de lubricación",
+        "Garantía por escrito del trabajo",
       ],
-      ctaText: "Reparar mi Motor",
-      ctaLink: "https://wa.me/593992797349?text=Hola, necesito reparación de motor de vehículo liviano",
+      ctaText: "Cotizar Reparación",
+      ctaLink: "https://wa.me/593983237491?text=Hola,%20necesito%20reparación%20de%20motor%20de%20vehículo%20liviano",
     },
   ]
 
@@ -186,7 +185,7 @@ export default function LivianosPricingSection() {
             Confía en nuestro taller para autos en Loja. Nuestro equipo de mecánicos expertos está capacitado para trabajar con todas las marcas y modelos, garantizando un servicio de calidad y la solución a cualquier problema de motor.
           </p>
 
-          <a href="https://wa.me/593992797349" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/593983237491?text=Hola,%20solicito%20atención%20para%20mi%20vehículo" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-[#ec0018] hover:bg-[#c40014] text-white px-8 py-4 text-lg font-bold rounded-lg"

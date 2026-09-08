@@ -8,6 +8,7 @@ import GuaranteesSection from "@/components/guarantees-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import WhyChooseUs from "@/components/why-choose-us"
 import PricingSection from "@/components/pricing-section"
+import BookingSection from "@/components/booking-section"
 import FAQSection from "@/components/faq-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
@@ -155,6 +156,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <TestimonialsSection />
       <PricingSection />
+      <BookingSection />
       <FAQSection />
       <ContactSection />
       <Footer brandName="Mecánica Loja" />

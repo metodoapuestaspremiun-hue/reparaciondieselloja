@@ -21,7 +21,7 @@ export default function CamionetasPricingSection() {
         "Informe detallado"
       ],
       ctaText: "Solicitar Diagnóstico",
-      ctaLink: "https://wa.me/593992797349?text=Hola, quiero un diagnóstico para mi camioneta"
+      ctaLink: "https://wa.me/593983237491?text=Hola,%20quiero%20un%20diagnóstico%20para%20mi%20camioneta"
     },
     {
       title: "Mantenimiento Preventivo",
@@ -36,7 +36,7 @@ export default function CamionetasPricingSection() {
         "Puesta a punto general"
       ],
       ctaText: "Programar Mantenimiento",
-      ctaLink: "https://wa.me/593992797349?text=Hola, quiero programar mantenimiento para mi camioneta"
+      ctaLink: "https://wa.me/593983237491?text=Hola,%20quiero%20programar%20mantenimiento%20para%20mi%20camioneta"
     },
     {
       title: "Reparación Especializada",
@@ -51,7 +51,7 @@ export default function CamionetasPricingSection() {
         "Garantía en mano de obra"
       ],
       ctaText: "Cotizar Reparación",
-      ctaLink: "https://wa.me/593992797349?text=Hola, necesito cotización para reparación de motor de camioneta"
+      ctaLink: "https://wa.me/593983237491?text=Hola,%20necesito%20cotización%20para%20reparación%20de%20motor%20de%20camioneta"
     }
   ]
 
@@ -182,7 +182,7 @@ export default function CamionetasPricingSection() {
             para uso mixto, componentes resistentes y garantía para trabajo pesado.
           </p>
 
-          <a href="https://wa.me/593992797349" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/593983237491?text=Hola,%20solicito%20cotización%20para%20mi%20camioneta" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-[#ec0018] hover:bg-[#c40014] text-white px-8 py-4 text-lg font-bold rounded-lg"

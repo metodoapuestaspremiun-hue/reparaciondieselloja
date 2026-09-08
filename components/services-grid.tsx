@@ -14,26 +14,26 @@ export default function ServicesGrid() {
     {
       title: "REPARACIÓN INTEGRAL DE MOTORES DIÉSEL",
       description:
-        "Nos especializamos en la reparación y reconstrucción de motores diésel de todas las marcas, en Loja. Tanto vehículos livianos medianos y pesados, siempre respaldado por los años de experiencia",
+        "Nos especializamos en la reparación y reconstrucción de motores diésel de todas las marcas, en Loja. Vehículos livianos, camionetas y transporte pesado con diagnóstico computarizado.",
       image: "/nuevas/mecanica_en_loja_reparacion.webp",
-      link: "/servicios/reparacion",
-      cta: "SOLICITAR CITA DE REPARACIÓN"
+      link: "/motores-diesel",
+      cta: "VER SERVICIOS DIÉSEL"
     },
     {
-      title: "MANTENIMIENTO PARA ALARGAR VIDA ÚTIL",
+      title: "MECÁNICA Y MANTENIMIENTO PARA CAMIONETAS",
       description:
-        "Programas de mantenimiento y seguimiento diseñados para alargar la vida útil y evitar averías costosas. Solución ideal para flotas en Loja.",
-      image: "/images/motor_liviano.jpg",
-      link: "/servicios/mantenimiento",
-      cta: "CONSULTAR PROGRAMAS"
+        "Programas de mantenimiento preventivo y reparación mayor para camionetas 4x4 y de trabajo. Calibración, suspensión y sistemas de inyección en Loja.",
+      image: "/images/motor_camioneta.jpg",
+      link: "/camionetas",
+      cta: "VER SERVICIO CAMIONETAS"
     },
     {
-      title: "DIAGNÓSTICO COMPUTARIZADO DE MOTOR",
+      title: "VEHÍCULOS PESADOS Y FLOTAS COMERCIALES",
       description:
-        "Tecnología de punta para el diagnóstico de sistemas de motor y fallas electrónicas. Identificamos el problema rápidamente para una reparación precisa.",
-      image: "/nuevas/mecanica_en_loja_diagnostico.webp",
-      link: "/servicios/diagnostico",
-      cta: "SOLICITAR DIAGNÓSTICO RÁPIDO"
+        "Servicio técnico especializado para camiones, buses y flotas pesadas. Reconstrucción de motores, overhaul y calibración para trabajo pesado.",
+      image: "/images/motor_pesados.jpg",
+      link: "/vehiculos-pesados",
+      cta: "VER VEHÍCULOS PESADOS"
     }
   ]
 
@@ -75,7 +75,7 @@ export default function ServicesGrid() {
                       <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-6">
                         <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                         <p className="text-gray-200 text-sm mb-4">{service.description}</p>
-                        <Link href="#atencion-region-sur">
+                        <Link href={service.link}>
                           <Button className="bg-[#ec0018] hover:bg-[#c40014] text-white">{service.cta || 'Solicitar Cita'}</Button>
                         </Link>
                       </div>
@@ -128,7 +128,7 @@ export default function ServicesGrid() {
                   {service.title}
                 </h3>
                 <p className="text-gray-200 text-sm mb-4">{service.description}</p>
-                <Link href="#atencion-region-sur">
+                <Link href={service.link}>
                   <Button className="bg-[#ec0018] hover:bg-[#c40014] text-white transform group-hover:scale-105 transition-transform">
                     {service.cta || 'Solicitar Cita'}
                   </Button>

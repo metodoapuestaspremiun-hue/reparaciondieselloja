@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Phone, MessageCircle, MapPin } from "lucide-react"
 
-export default function Footer({ brandName = "Automotriz Chávez" }: { brandName?: string } = {}) {
+export default function Footer({ brandName = "Mecánica Loja" }: { brandName?: string } = {}) {
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">

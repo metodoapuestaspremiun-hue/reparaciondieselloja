@@ -7,7 +7,7 @@
     "postbuild": "node scripts/generate-sitemap.js",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "serve out -p 3000"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -66,6 +66,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8.5",
+    "serve": "^14.2.6",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
