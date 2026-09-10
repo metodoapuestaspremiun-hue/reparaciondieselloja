@@ -23,13 +23,17 @@ export default function GuaranteesSection() {
   ]
 
   return (
-    <section className="py-16 bg-[#ec0018] relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section className="py-20 bg-[#24272B] border-b border-[#34373C] text-white relative overflow-hidden">
+      <div className="container mx-auto px-4 max-w-[1140px] relative z-10">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="text-xs sm:text-sm font-heading font-bold text-amber tracking-widest uppercase block mb-3">
+            RESPALDO DE MARCA Y TRAYECTORIA
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-bold text-white uppercase tracking-tight mb-4 leading-tight">
             Garantía de Calidad en Toda la Región Sur
           </h2>
-          <p className="text-lg text-white max-w-3xl mx-auto">
+          <div className="w-12 h-[2px] bg-amber mx-auto mb-5" />
+          <p className="text-base sm:text-lg text-[#C7C9CD] leading-relaxed font-sans">
             En Mecánica Loja, somos el taller referente para la reparación de motores diésel en Loja. Nuestro servicio va más allá del taller; es un compromiso de confianza y respaldo técnico. Garantizamos la calidad de nuestro trabajo para todos los clientes que nos visitan. Tu satisfacción es nuestra mejor garantía.
           </p>
         </div>
@@ -38,13 +42,17 @@ export default function GuaranteesSection() {
           {guarantees.map((guarantee, index) => (
             <div
               key={index}
-              className="text-center p-6 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg hover:bg-opacity-30 transition-all duration-300 transform hover:-translate-y-2"
+              className="p-8 bg-charcoal border border-[#3E4249] border-t-2 border-t-amber rounded-[2px] shadow-sm hover:border-amber transition-colors duration-200"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4">
-                <guarantee.icon className="w-8 h-8 text-[#ec0018]" />
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-[#2A2E33] border border-[#3E4249] rounded-[2px] mb-6">
+                <guarantee.icon className="w-6 h-6 text-amber" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">{guarantee.title}</h3>
-              <p className="text-red-100 leading-relaxed">{guarantee.description}</p>
+              <h3 className="text-2xl font-heading font-bold text-white mb-3 uppercase tracking-wide">
+                {guarantee.title}
+              </h3>
+              <p className="text-[#9A9DA3] text-sm leading-relaxed font-sans">
+                {guarantee.description}
+              </p>
             </div>
           ))}
         </div>
@@ -52,3 +60,4 @@ export default function GuaranteesSection() {
     </section>
   )
 }
+

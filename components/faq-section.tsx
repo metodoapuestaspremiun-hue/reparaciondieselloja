@@ -39,14 +39,18 @@ export default function FAQSection() {
   }
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-paper border-b border-line text-ink">
+      <div className="container mx-auto px-4 max-w-[1140px]">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-14">
+            <span className="text-xs sm:text-sm font-heading font-bold text-amber-dim tracking-widest uppercase block mb-3">
+              RESOLUCIÓN DE DUDAS
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-bold text-ink uppercase tracking-tight mb-4">
               Preguntas Frecuentes - Motores Diesel
             </h2>
-            <p className="text-lg text-gray-600">
+            <div className="w-12 h-[2px] bg-amber mx-auto mb-5" />
+            <p className="text-base sm:text-lg text-ash font-sans">
               Encuentra respuestas a las preguntas más comunes sobre nuestros servicios de reparación de motores diésel en Loja.
             </p>
           </div>
@@ -55,23 +59,23 @@ export default function FAQSection() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                className="border border-line rounded-[2px] bg-white overflow-hidden shadow-sm transition-all"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-[#F7F7F5] transition-colors"
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
+                  <h3 className="text-lg font-heading font-bold text-ink uppercase tracking-wide pr-4">{faq.question}</h3>
                   {openFAQ === index ? (
-                    <ChevronUp className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-amber-dim flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <ChevronDown className="w-5 h-5 text-amber-dim flex-shrink-0" />
                   )}
                 </button>
 
                 {openFAQ === index && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <div className="px-6 pb-5 pt-1 border-t border-line/60">
+                    <p className="text-ash font-sans leading-relaxed text-sm sm:text-base">{faq.answer}</p>
                   </div>
                 )}
               </div>

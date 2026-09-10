@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mecánica Loja — Propuesta de diseño</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root{
+    --charcoal:#1A1C1F;
+    --charcoal-2:#24272B;
+    --steel:#4B535D;
+    --amber:#F2A900;
+    --amber-dim:#B87F00;
+    --offwhite:#F1F1EF;
+    --paper:#FAFAF8;
+    --ink:#15171A;
+    --ash:#6B7178;
+    --line:#D9D9D4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+  }
+  h1,h2,h3,.condensed{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;
+    letter-spacing:0.01em;
+    line-height:1.02;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1140px; margin:0 auto; padding:0 28px;}
+
+  /* ===== HEADER ===== */
+  header{
+    background:var(--charcoal);
+    color:var(--offwhite);
+    border-bottom:1px solid #000;
+  }
+  .navbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+  }
+  .logo{
+    font-family:'Barlow Condensed'; font-weight:800; font-size:24px;
+    color:#fff; display:flex; align-items:center; gap:10px;
+  }
+  .logo .dot{width:8px; height:8px; background:var(--amber); border-radius:50%; display:inline-block;}
+  nav{display:flex; gap:32px; font-size:14px; font-weight:500; color:#B9BCC1;}
+  .call-btn{
+    background:var(--amber); color:var(--charcoal); font-weight:700; font-size:14px;
+    padding:10px 18px; border-radius:2px;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    background:var(--charcoal); color:#fff; position:relative; overflow:hidden;
+    background-image:
+      linear-gradient(180deg, rgba(26,28,31,.55), rgba(26,28,31,.92)),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 64px);
+  }
+  .hero-inner{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:40px;
+    padding:88px 0 72px; align-items:center;
+  }
+  .eyebrow-line{
+    display:flex; align-items:center; gap:10px; margin-bottom:18px;
+    font-size:13px; color:var(--amber); font-weight:600; letter-spacing:.03em;
+  }
+  .eyebrow-line .rule{width:32px; height:2px; background:var(--amber);}
+  .hero h1{
+    font-size:58px; color:#fff; max-width:11ch;
+  }
+  .hero p{
+    color:#C7C9CD; font-size:17px; max-width:46ch; margin-top:20px;
+  }
+  .hero-ctas{display:flex; gap:14px; margin-top:32px;}
+  .btn-primary{
+    background:var(--amber); color:var(--charcoal); font-weight:700; font-size:15px;
+    padding:15px 26px; border-radius:2px;
+  }
+  .btn-ghost{
+    border:1px solid #4A4E54; color:#fff; font-weight:600; font-size:15px;
+    padding:14px 26px; border-radius:2px;
+  }
+  .stat-row{
+    display:flex; gap:36px; margin-top:52px; padding-top:28px; border-top:1px solid #34373C;
+  }
+  .stat b{font-family:'Barlow Condensed'; font-size:34px; color:var(--amber); display:block; font-weight:700;}
+  .stat span{font-size:12.5px; color:#9A9DA3;}
+
+  .hero-photo{
+    position:relative; height:420px;
+    clip-path:polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
+    background:linear-gradient(160deg,#3A4048,#1A1C1F 70%);
+    border-left:3px solid var(--amber);
+  }
+  .hero-photo::after{
+    content:"MOTOR DIÉSEL · OVERHAUL · DIAGNÓSTICO";
+    position:absolute; bottom:20px; left:24px; font-family:'Barlow Condensed';
+    font-size:13px; letter-spacing:.08em; color:#8B8E93;
+  }
+
+  /* ===== SECTION HEAD ===== */
+  .section{padding:88px 0;}
+  .section-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:44px; gap:20px;}
+  .section-head h2{font-size:38px; max-width:14ch;}
+  .section-head p{color:var(--ash); font-size:15px; max-width:34ch;}
+  .tag{font-size:12.5px; font-weight:600; color:var(--amber-dim); margin-bottom:10px; display:block;}
+
+  /* ===== SERVICES — work order list, not cards ===== */
+  .worksheet{border-top:2px solid var(--ink);}
+  .work-row{
+    display:grid; grid-template-columns:64px 1fr 1.4fr auto;
+    gap:24px; align-items:center; padding:28px 0; border-bottom:1px solid var(--line);
+  }
+  .work-row .code{font-family:'Barlow Condensed'; font-size:15px; color:var(--ash); font-weight:600;}
+  .work-row h3{font-size:24px;}
+  .work-row p{font-size:14.5px; color:var(--ash); max-width:44ch;}
+  .work-row a{font-size:13.5px; font-weight:700; color:var(--ink); border-bottom:2px solid var(--amber); white-space:nowrap;}
+
+  /* ===== PRICING — work order ticket, sequence justified ===== */
+  .ticket-band{background:var(--charcoal-2); color:#fff;}
+  .ticket-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid #3A3D42;}
+  .ticket{padding:32px 26px; border-right:1px solid #3A3D42;}
+  .ticket:last-child{border-right:none;}
+  .ticket .num{font-family:'Barlow Condensed'; font-size:15px; color:var(--amber); font-weight:700;}
+  .ticket h3{font-size:24px; margin:10px 0 4px; color:#fff;}
+  .ticket .pct{font-size:13px; color:#9A9DA3; margin-bottom:14px;}
+  .ticket p{font-size:14px; color:#B9BCC1; margin-bottom:16px;}
+  .ticket ul{list-style:none; font-size:13.5px; color:#C7C9CD;}
+  .ticket li{padding:6px 0; border-top:1px solid #34373C;}
+
+  /* ===== TESTIMONIALS — shop tags ===== */
+  .tag-row{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .shop-tag{
+    background:var(--paper); border:1px solid var(--line); border-left:4px solid var(--amber);
+    padding:26px 24px; position:relative;
+  }
+  .shop-tag h3{font-size:20px; margin-bottom:10px;}
+  .shop-tag p{font-size:14.5px; color:var(--ash);}
+  .shop-tag .who{margin-top:16px; font-size:13px; color:var(--ink); font-weight:600;}
+
+  footer{background:var(--charcoal); color:#9A9DA3; padding:56px 0 28px; font-size:13.5px;}
+  footer h3{color:#fff; font-family:'Barlow Condensed'; font-size:20px; margin-bottom:14px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:36px; border-bottom:1px solid #2E3136;}
+  .foot-bottom{padding-top:22px; display:flex; justify-content:space-between; font-size:12.5px;}
+
+  .note{background:#fff; border:1px dashed var(--amber-dim); padding:16px 20px; font-size:13px; color:var(--ash); margin:0 0 0;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo"><span class="dot"></span>MECÁNICA LOJA</div>
+    <nav>
+      <a>Motores Diésel</a><a>Camionetas</a><a>Vehículos Pesados</a><a>Agendamiento</a>
+    </nav>
+    <a href="#" class="call-btn">098 323 7491</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow-line"><span class="rule"></span>REGIÓN SUR DEL ECUADOR — DESDE 1989</div>
+      <h1>Reparación de motores diésel en Loja</h1>
+      <p>35 años reconstruyendo motores diésel para transporte pesado, camionetas y flotas comerciales. Diagnóstico computarizado, garantía por escrito.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn-primary">Solicitar diagnóstico gratis</a>
+        <a href="#" class="btn-ghost">Ver por WhatsApp</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b>35+</b><span>años de experiencia</span></div>
+        <div class="stat"><b>3,000+</b><span>clientes atendidos</span></div>
+        <div class="stat"><b>100%</b><span>garantía por escrito</span></div>
+      </div>
+    </div>
+    <div class="hero-photo"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="tag">SERVICIOS ESPECIALIZADOS</span>
+        <h2>Tu motor, en manos de expertos</h2>
+      </div>
+      <p>Reparación integral, mantenimiento preventivo y diagnóstico computarizado para cada tipo de motor.</p>
+    </div>
+    <div class="worksheet">
+      <div class="work-row">
+        <div class="code">01 / DSL</div>
+        <h3>Motores diésel</h3>
+        <p>Reparación y reconstrucción integral de motores diésel de todas las marcas, con diagnóstico computarizado.</p>
+        <a href="#">Ver servicio →</a>
+      </div>
+      <div class="work-row">
+        <div class="code">02 / 4X4</div>
+        <h3>Camionetas</h3>
+        <p>Mantenimiento preventivo, calibración, suspensión y sistemas de inyección para camionetas 4x4 y de trabajo.</p>
+        <a href="#">Ver servicio →</a>
+      </div>
+      <div class="work-row">
+        <div class="code">03 / FLT</div>
+        <h3>Vehículos pesados y flotas</h3>
+        <p>Overhaul, reconstrucción y calibración de motores para camiones, buses y flotas comerciales.</p>
+        <a href="#">Ver servicio →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ticket-band section">
+  <div class="wrap">
+    <div class="section-head" style="border:none;">
+      <div>
+        <span class="tag" style="color:var(--amber)">ORDEN DE TRABAJO</span>
+        <h2 style="color:#fff">Pago claro, en 3 etapas</h2>
+      </div>
+      <p style="color:#9A9DA3">Transparencia total: sabes exactamente qué cubre cada pago, desde el diagnóstico hasta la entrega.</p>
+    </div>
+    <div class="ticket-grid">
+      <div class="ticket">
+        <div class="num">1 · ENTRADA — 33%</div>
+        <h3>Diagnóstico y arranque</h3>
+        <p>Diagnóstico completo y planificación del trabajo.</p>
+        <ul><li>Diagnóstico completo</li><li>Evaluación de piezas</li><li>Cronograma detallado</li></ul>
+      </div>
+      <div class="ticket">
+        <div class="num">2 · AVANCE — 33%</div>
+        <h3>Desmontaje y reparación</h3>
+        <p>Limpieza, reemplazo de componentes y control de calidad.</p>
+        <ul><li>Desmontaje y limpieza</li><li>Reemplazo de piezas</li><li>Control de calidad</li></ul>
+      </div>
+      <div class="ticket">
+        <div class="num">3 · CONTRAENTREGA — 34%</div>
+        <h3>Pruebas y entrega</h3>
+        <p>Pruebas finales, garantía por escrito y asesoría.</p>
+        <ul><li>Pruebas finales</li><li>Garantía por escrito</li><li>Asesoría de mantenimiento</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="tag">CLIENTES</span><h2>Confianza de toda la región</h2></div>
+    </div>
+    <div class="tag-row">
+      <div class="shop-tag"><h3>El único taller de alta especialización</h3><p>"Encontré el nivel de especialización que necesitaba en Loja. Repararon mi motor en tiempo récord y el servicio es garantizado."</p><div class="who">Luis R. — Transportista</div></div>
+      <div class="shop-tag"><h3>Excelente servicio para flotas</h3><p>"Su programa de mantenimiento preventivo nos ha ahorrado miles en reparaciones inesperadas."</p><div class="who">Patricia T. — Empresaria</div></div>
+      <div class="shop-tag"><h3>Expertos en maquinaria pesada</h3><p>"Confío en su trabajo porque sé que mi maquinaria siempre está en buenas manos."</p><div class="who">Jorge M. — Contratista</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Mecánica Loja</h3>
+        <p>Juan José Peña y Mercadillo, Loja.<br>Especialistas en motores diésel para vehículos pesados, camionetas y maquinaria industrial.</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <p>098 323 7491<br>Lunes a Sábado: 8:00 AM – 6:00 PM</p>
+      </div>
+      <div>
+        <h3>Servicios</h3>
+        <p>Motores Diésel<br>Camionetas<br>Vehículos Pesados</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Mecánica Loja</span>
+      <span>Taller especializado en reparación de motores diésel</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

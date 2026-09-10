@@ -3,9 +3,21 @@ import type { Metadata } from "next"
 import "./globals.css"
 import WhatsAppFloat from "@/components/whatsapp-float"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Inter } from "next/font/google"
+import { Inter, Barlow_Condensed } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+})
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-barlow-condensed",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Mecánica Loja",
@@ -32,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="es" suppressHydrationWarning className={`${inter.variable} ${barlowCondensed.variable}`}>
+      <body className={`${inter.className} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           {children}
           <WhatsAppFloat />

@@ -34,39 +34,47 @@ export default function DieselFAQSection() {
   }
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+    <section className="py-20 lg:py-24 bg-paper text-ink border-b border-line">
+      <div className="container mx-auto px-4 max-w-[1140px]">
+        <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <span className="text-xs sm:text-sm font-heading font-bold text-amber-dim tracking-widest uppercase block mb-2">
+              CONSULTAS TÉCNICAS FRECUENTES
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-heading font-bold text-ink uppercase tracking-tight leading-tight mb-4">
               Preguntas frecuentes sobre motores diésel
             </h2>
-            <p className="text-lg text-gray-600">
+            <div className="w-12 h-[2px] bg-amber mx-auto mb-4" />
+            <p className="text-sm sm:text-base text-ash font-sans">
               Todo lo que necesitas saber sobre el cuidado y mantenimiento de tu motor diésel en Loja.
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                className="border border-line bg-white rounded-[2px] transition-colors"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-[#F5F5F2] transition-colors"
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
+                  <h3 className="text-base sm:text-lg font-heading font-bold text-ink pr-4 uppercase">
+                    {faq.question}
+                  </h3>
                   {openFAQ === index ? (
-                    <ChevronUp className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-amber-dim flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-ash flex-shrink-0" />
                   )}
                 </button>
 
                 {openFAQ === index && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <div className="px-6 pb-5 pt-1 border-t border-line/60">
+                    <p className="text-sm text-ash leading-relaxed font-sans">
+                      {faq.answer}
+                    </p>
                   </div>
                 )}
               </div>

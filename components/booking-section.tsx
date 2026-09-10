@@ -199,36 +199,34 @@ export default function BookingSection() {
   }
 
   return (
-    <section id="agendamiento" className="py-16 lg:py-24 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white relative overflow-hidden">
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider mb-4">
-            <Sparkles className="w-4 h-4" />
+    <section id="agendamiento" className="py-20 lg:py-24 bg-charcoal border-b border-[#34373C] text-white relative overflow-hidden">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-[1140px]">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[2px] bg-[#24272B] border border-amber/30 text-amber text-xs font-heading font-bold uppercase tracking-wider mb-4">
+            <Sparkles className="w-3.5 h-3.5" />
             Sistema de Turnos & Asesoría Virtual
           </div>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-bold text-white tracking-tight mb-4 uppercase leading-tight">
             Agendamiento de Citas en Loja
           </h2>
-          <p className="text-gray-300 text-base md:text-lg">
+          <div className="w-12 h-[2px] bg-amber mx-auto mb-5" />
+          <p className="text-[#C7C9CD] text-base md:text-lg font-sans leading-relaxed">
             Revisa la disponibilidad en tiempo real en nuestro calendario. Los días en verde tienen cupos libres, los rojos están ocupados o cerrados.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 items-start max-w-6xl mx-auto">
           {/* Panel Izquierdo: Formulario con Calendario Real */}
-          <div className="lg:col-span-7 bg-gray-900/90 border border-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-sm">
-            <div className="flex items-center justify-between pb-6 mb-6 border-b border-gray-800">
+          <div className="lg:col-span-7 bg-[#24272B] border border-[#3E4249] rounded-[2px] p-6 sm:p-8 shadow-xl">
+            <div className="flex items-center justify-between pb-6 mb-6 border-b border-[#34373C]">
               <div>
-                <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                  <CalendarIcon className="w-5 h-5 text-red-500" />
+                <h3 className="text-xl font-heading font-bold text-white uppercase tracking-wide flex items-center gap-2">
+                  <CalendarIcon className="w-5 h-5 text-amber" />
                   Calendario de Turnos en Vivo
                 </h3>
-                <p className="text-xs text-gray-400 mt-1">Selecciona tu día libre y horario</p>
+                <p className="text-xs text-[#9A9DA3] mt-1 font-sans">Selecciona tu día libre y horario</p>
               </div>
-              <div className="flex items-center gap-3 text-xs">
+              <div className="flex items-center gap-3 text-xs font-sans">
                 <span className="flex items-center gap-1.5 text-gray-300">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" /> Libre
                 </span>
@@ -240,12 +238,12 @@ export default function BookingSection() {
 
             {isBooked ? (
               <div className="text-center py-12 px-4 space-y-4">
-                <CheckCircle2 className="w-16 h-16 text-emerald-400 mx-auto animate-bounce" />
-                <h4 className="text-2xl font-bold text-white">¡Turno Pre-Agendado con Éxito!</h4>
-                <p className="text-gray-300 text-sm max-w-md mx-auto">
-                  Tu solicitud para el día <span className="text-red-400 font-bold">{formData.preferredDate}</span> a las <span className="text-red-400 font-bold">{formData.preferredTime}</span> fue generada.
+                <CheckCircle2 className="w-16 h-16 text-emerald-400 mx-auto" />
+                <h4 className="text-2xl font-heading font-bold text-white uppercase">¡Turno Pre-Agendado con Éxito!</h4>
+                <p className="text-gray-300 text-sm max-w-md mx-auto font-sans">
+                  Tu solicitud para el día <span className="text-amber font-bold">{formData.preferredDate}</span> a las <span className="text-amber font-bold">{formData.preferredTime}</span> fue generada.
                 </p>
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-[#9A9DA3] font-sans">
                   Se ha generado el enlace para que lo confirmes con un clic por WhatsApp.
                 </p>
                 <Button 
@@ -347,8 +345,8 @@ export default function BookingSection() {
 
                 {/* 1. Selección de Horarios */}
                 <div>
-                  <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-red-500" />
+                  <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 flex items-center gap-1.5 font-heading">
+                    <Clock className="w-3.5 h-3.5 text-amber" />
                     Horario de Atención
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -360,16 +358,16 @@ export default function BookingSection() {
                           type="button"
                           disabled={slot.occupied}
                           onClick={() => setFormData(p => ({ ...p, preferredTime: slot.time }))}
-                          className={`py-2 px-2.5 rounded-lg border text-xs font-semibold transition-all ${
+                          className={`py-2 px-2.5 rounded-[2px] border text-xs font-heading font-semibold transition-all ${
                             slot.occupied
-                              ? "bg-gray-900/40 border-gray-800 text-gray-600 cursor-not-allowed"
+                              ? "bg-charcoal/40 border-[#2E3136] text-gray-600 cursor-not-allowed"
                               : selected
-                              ? "bg-red-600 border-red-500 text-white shadow-md shadow-red-600/30"
-                              : "bg-gray-800/60 border-gray-700 text-gray-200 hover:bg-gray-700"
+                              ? "bg-amber border-amber text-charcoal shadow-sm"
+                              : "bg-[#1E2024] border-[#3E4249] text-gray-200 hover:bg-[#2A2E33]"
                           }`}
                         >
                           {slot.time}
-                          {slot.occupied && <span className="block text-[9px] text-gray-500">Lleno</span>}
+                          {slot.occupied && <span className="block text-[9px] text-gray-500 font-sans">Lleno</span>}
                         </button>
                       )
                     })}
@@ -378,7 +376,7 @@ export default function BookingSection() {
 
                 {/* 2. Tipo de Vehículo */}
                 <div>
-                  <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 font-heading">
                     Tipo de Vehículo
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -390,14 +388,14 @@ export default function BookingSection() {
                           key={opt.id}
                           type="button"
                           onClick={() => setFormData(p => ({ ...p, vehicleType: opt.id }))}
-                          className={`p-2.5 rounded-xl border text-left flex flex-col items-center justify-center gap-1.5 transition-all ${
+                          className={`p-2.5 rounded-[2px] border text-left flex flex-col items-center justify-center gap-1.5 transition-all ${
                             selected 
-                              ? "bg-red-600/20 border-red-500 text-white shadow-lg shadow-red-500/10 scale-[1.02]"
-                              : "bg-gray-800/50 border-gray-700/60 text-gray-300 hover:bg-gray-800 hover:border-gray-600"
+                              ? "bg-amber/10 border-amber text-white"
+                              : "bg-[#1E2024] border-[#3E4249] text-gray-300 hover:bg-[#2A2E33]"
                           }`}
                         >
-                          <Icon className={`w-4 h-4 ${selected ? "text-red-500" : "text-gray-400"}`} />
-                          <span className="text-[11px] font-semibold text-center leading-tight">{opt.label}</span>
+                          <Icon className={`w-4 h-4 ${selected ? "text-amber" : "text-gray-400"}`} />
+                          <span className="text-[11px] font-heading font-semibold text-center leading-tight">{opt.label}</span>
                         </button>
                       )
                     })}
@@ -406,16 +404,16 @@ export default function BookingSection() {
 
                 {/* 3. Servicio Requerido */}
                 <div>
-                  <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 font-heading">
                     Servicio Requerido
                   </label>
                   <select
                     value={formData.serviceType}
                     onChange={(e) => setFormData(p => ({ ...p, serviceType: e.target.value }))}
-                    className="w-full bg-gray-800/80 border border-gray-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-red-500"
+                    className="w-full bg-[#1E2024] border border-[#3E4249] rounded-[2px] px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber font-sans"
                   >
                     {serviceOptions.map(serv => (
-                      <option key={serv.id} value={serv.id} className="bg-gray-900 text-white">
+                      <option key={serv.id} value={serv.id} className="bg-charcoal text-white">
                         {serv.label}
                       </option>
                     ))}
@@ -425,7 +423,7 @@ export default function BookingSection() {
                 {/* 4. Datos de Contacto */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 font-heading">
                       Nombre Completo
                     </label>
                     <input
@@ -434,12 +432,12 @@ export default function BookingSection() {
                       placeholder="Ej: Carlos Silva"
                       value={formData.name}
                       onChange={(e) => setFormData(p => ({ ...p, name: e.target.value }))}
-                      className="w-full bg-gray-800/80 border border-gray-700 rounded-xl px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-red-500"
+                      className="w-full bg-[#1E2024] border border-[#3E4249] rounded-[2px] px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-amber font-sans"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 font-heading">
                       WhatsApp de Contacto
                     </label>
                     <input
@@ -448,7 +446,7 @@ export default function BookingSection() {
                       placeholder="Ej: 099 123 4567"
                       value={formData.phone}
                       onChange={(e) => setFormData(p => ({ ...p, phone: e.target.value }))}
-                      className="w-full bg-gray-800/80 border border-gray-700 rounded-xl px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-red-500"
+                      className="w-full bg-[#1E2024] border border-[#3E4249] rounded-[2px] px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-amber font-sans"
                     />
                   </div>
                 </div>
@@ -457,18 +455,18 @@ export default function BookingSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-red-600/30 transition-all duration-300 transform hover:-translate-y-0.5 text-base"
+                  className="w-full bg-amber hover:bg-[#d99700] text-charcoal font-heading font-bold py-3.5 rounded-[2px] transition-colors uppercase tracking-wider text-base"
                 >
                   Confirmar Turno en Calendario
                 </Button>
 
-                <div className="flex items-center justify-center gap-6 pt-1 text-xs text-gray-400">
+                <div className="flex items-center justify-center gap-6 pt-1 text-xs text-gray-400 font-sans">
                   <span className="flex items-center gap-1">
                     <ShieldCheck className="w-4 h-4 text-emerald-400" />
                     Sin costo anticipado
                   </span>
                   <span className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4 text-red-400" />
+                    <MapPin className="w-4 h-4 text-amber" />
                     Juan José Peña y Mercadillo, Loja
                   </span>
                 </div>
@@ -477,52 +475,52 @@ export default function BookingSection() {
           </div>
 
           {/* Panel Derecho: Asistente Bot Interactivo */}
-          <div className="lg:col-span-5 flex flex-col h-[640px] bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl">
-            <div className="bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 p-4 border-b border-gray-800 flex items-center justify-between">
+          <div className="lg:col-span-5 flex flex-col h-[640px] bg-[#24272B] border border-[#3E4249] rounded-[2px] overflow-hidden shadow-xl">
+            <div className="bg-charcoal p-4 border-b border-[#3E4249] flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <div className="w-10 h-10 rounded-full bg-red-600/20 border border-red-500 flex items-center justify-center text-red-500">
+                  <div className="w-10 h-10 rounded-[2px] bg-[#2A2E33] border border-amber flex items-center justify-center text-amber">
                     <Bot className="w-6 h-6" />
                   </div>
-                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 border-2 border-gray-900 rounded-full" />
+                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 border-2 border-charcoal rounded-full" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white flex items-center gap-1.5">
+                  <h4 className="text-sm font-heading font-bold text-white uppercase tracking-wide flex items-center gap-1.5">
                     MecaniBot Loja
-                    <span className="text-[10px] uppercase tracking-wider bg-red-500/20 text-red-400 px-1.5 py-0.5 rounded font-bold">
+                    <span className="text-[10px] uppercase tracking-wider bg-amber/20 text-amber px-1.5 py-0.5 rounded-[1px] font-bold">
                       Asistente IA
                     </span>
                   </h4>
-                  <p className="text-xs text-gray-400">Pregúntame sobre fallas o costos</p>
+                  <p className="text-xs text-[#9A9DA3] font-sans">Pregúntame sobre fallas o costos</p>
                 </div>
               </div>
               <a 
                 href="https://wa.me/593983237491?text=Hola,%20solicito%20atención%20con%20un%20mecánico%20en%20vivo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-semibold text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 px-2.5 py-1.5 rounded-lg transition-colors flex items-center gap-1"
+                className="text-xs font-heading font-semibold text-gray-300 hover:text-white bg-charcoal hover:bg-[#3E4249] px-2.5 py-1.5 rounded-[2px] border border-[#3E4249] transition-colors flex items-center gap-1 uppercase"
               >
-                <PhoneCall className="w-3.5 h-3.5 text-emerald-400" />
+                <PhoneCall className="w-3.5 h-3.5 text-amber" />
                 Asesor
               </a>
             </div>
 
-            <div className="flex-1 p-4 overflow-y-auto space-y-3.5 bg-gray-950/60">
+            <div className="flex-1 p-4 overflow-y-auto space-y-3.5 bg-charcoal/70">
               {messages.map((msg, idx) => (
                 <div 
                   key={idx}
                   className={`flex gap-2.5 ${msg.sender === "user" ? "justify-end" : "justify-start"}`}
                 >
                   {msg.sender === "bot" && (
-                    <div className="w-7 h-7 rounded-full bg-red-600/20 border border-red-500/40 flex items-center justify-center flex-shrink-0 text-red-400 mt-1">
+                    <div className="w-7 h-7 rounded-[2px] bg-[#2A2E33] border border-amber/40 flex items-center justify-center flex-shrink-0 text-amber mt-1">
                       <Bot className="w-4 h-4" />
                     </div>
                   )}
                   <div 
-                    className={`max-w-[82%] rounded-2xl px-4 py-2.5 text-xs sm:text-sm leading-relaxed ${
+                    className={`max-w-[82%] rounded-[2px] px-4 py-2.5 text-xs sm:text-sm leading-relaxed ${
                       msg.sender === "user"
-                        ? "bg-red-600 text-white rounded-tr-none shadow-md shadow-red-900/20"
-                        : "bg-gray-800/90 text-gray-200 border border-gray-700/60 rounded-tl-none"
+                        ? "bg-amber text-charcoal font-medium font-sans"
+                        : "bg-[#2A2E33] text-gray-200 border border-[#3E4249] font-sans"
                     }`}
                   >
                     <p>{msg.text}</p>
@@ -532,42 +530,42 @@ export default function BookingSection() {
               ))}
             </div>
 
-            <div className="p-3 bg-gray-900/90 border-t border-gray-800 flex gap-1.5 overflow-x-auto text-[11px] scrollbar-none">
+            <div className="p-3 bg-charcoal border-t border-[#3E4249] flex gap-1.5 overflow-x-auto text-[11px] scrollbar-none font-sans">
               <button 
                 type="button"
                 onClick={() => handleBotQuickPrompt("¿Cuánto cuesta un diagnóstico computarizado?")}
-                className="whitespace-nowrap px-2.5 py-1 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white border border-gray-700 transition-colors"
+                className="whitespace-nowrap px-2.5 py-1 rounded-[2px] bg-[#24272B] hover:bg-[#34373C] text-gray-300 hover:text-white border border-[#3E4249] transition-colors"
               >
                 💰 Costos de escáner
               </button>
               <button 
                 type="button"
                 onClick={() => handleBotQuickPrompt("Mi camioneta pierde fuerza en subidas y bota humo")}
-                className="whitespace-nowrap px-2.5 py-1 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white border border-gray-700 transition-colors"
+                className="whitespace-nowrap px-2.5 py-1 rounded-[2px] bg-[#24272B] hover:bg-[#34373C] text-gray-300 hover:text-white border border-[#3E4249] transition-colors"
               >
                 💨 Pérdida de fuerza
               </button>
               <button 
                 type="button"
                 onClick={() => handleBotQuickPrompt("¿En qué parte de Loja están ubicados?")}
-                className="whitespace-nowrap px-2.5 py-1 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white border border-gray-700 transition-colors"
+                className="whitespace-nowrap px-2.5 py-1 rounded-[2px] bg-[#24272B] hover:bg-[#34373C] text-gray-300 hover:text-white border border-[#3E4249] transition-colors"
               >
                 📍 Dirección exacta
               </button>
             </div>
 
-            <form onSubmit={handleBotSend} className="p-3 bg-gray-950 border-t border-gray-800 flex items-center gap-2">
+            <form onSubmit={handleBotSend} className="p-3 bg-charcoal border-t border-[#3E4249] flex items-center gap-2">
               <input
                 type="text"
                 placeholder="Escribe tu consulta mecánica..."
                 value={inputBot}
                 onChange={(e) => setInputBot(e.target.value)}
-                className="flex-1 bg-gray-900 border border-gray-700/80 rounded-xl px-3.5 py-2 text-xs sm:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-red-500"
+                className="flex-1 bg-[#1E2024] border border-[#3E4249] rounded-[2px] px-3.5 py-2 text-xs sm:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-amber font-sans"
               />
               <Button
                 type="submit"
                 size="icon"
-                className="bg-red-600 hover:bg-red-500 text-white rounded-xl flex-shrink-0 h-9 w-9"
+                className="bg-amber hover:bg-[#d99700] text-charcoal rounded-[2px] flex-shrink-0 h-9 w-9"
               >
                 <Send className="w-4 h-4" />
               </Button>

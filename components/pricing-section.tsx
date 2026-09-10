@@ -10,6 +10,7 @@ export default function PricingSection() {
   const pricingPlans = [
     {
       title: "Entrada",
+      step: "PASO 01",
       percentage: "33%",
       amount: "$XX",
       period: "USD",
@@ -27,6 +28,7 @@ export default function PricingSection() {
     },
     {
       title: "Avance",
+      step: "PASO 02",
       percentage: "33%",
       amount: "$XX",
       period: "USD",
@@ -44,6 +46,7 @@ export default function PricingSection() {
     },
     {
       title: "Contraentrega",
+      step: "PASO 03",
       percentage: "34%",
       amount: "$XX",
       period: "USD",
@@ -69,16 +72,22 @@ export default function PricingSection() {
   }
 
   return (
-    <section className="py-16 bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section className="py-20 bg-[#24272B] border-b border-[#34373C] text-white">
+      <div className="container mx-auto px-4 max-w-[1140px]">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="text-xs sm:text-sm font-heading font-bold text-amber tracking-widest uppercase block mb-3">
+            ESQUEMA TRANSPARENTE EN 3 FASES
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-bold text-white mb-4 uppercase tracking-tight leading-tight">
             Precios Claros: Invierte en la Vida de tu Motor
           </h2>
-          <p className="text-xl text-gray-300 mb-4">Tu Motor a la Medida, con Facilidades de Pago</p>
-          <div className="text-center mb-8">
-            <span className="text-5xl font-bold text-[#ec0018]">$XX</span>
-            <p className="text-gray-300 text-lg">Reparación completa de motor</p>
+          <div className="w-12 h-[2px] bg-amber mx-auto mb-5" />
+          <p className="text-xl font-heading font-semibold text-amber tracking-wide uppercase mb-6">
+            Tu Motor a la Medida, con Facilidades de Pago
+          </p>
+          <div className="text-center mb-4">
+            <span className="text-5xl font-heading font-bold text-white tracking-tight">$XX</span>
+            <p className="text-[#9A9DA3] text-sm font-sans mt-1">Reparación completa de motor</p>
           </div>
         </div>
 
@@ -91,29 +100,32 @@ export default function PricingSection() {
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {pricingPlans.map((plan, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="bg-white rounded-lg shadow-xl p-6 h-full border border-gray-200">
+                  <div key={index} className="w-full flex-shrink-0 px-2">
+                    <div className="bg-charcoal rounded-[2px] p-6 border border-[#3E4249] border-t-2 border-t-amber shadow-lg">
+                      <div className="flex justify-between items-center mb-4 pb-3 border-b border-[#34373C]">
+                        <span className="text-xs font-heading font-bold text-[#9A9DA3] tracking-widest">{plan.step}</span>
+                        <div className="text-xl font-heading font-bold text-amber">{plan.percentage}</div>
+                      </div>
                       <div className="mb-6">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.title}</h3>
+                        <h3 className="text-2xl font-heading font-bold text-white mb-2 uppercase tracking-wide">{plan.title}</h3>
                         <div className="flex items-baseline mb-2">
-                          <span className="text-4xl font-bold text-gray-900">{plan.amount}</span>
-                          <span className="text-lg text-gray-600 ml-2">{plan.period}</span>
+                          <span className="text-4xl font-heading font-bold text-white">{plan.amount}</span>
+                          <span className="text-sm text-[#9A9DA3] ml-2">{plan.period}</span>
                         </div>
-                        <div className="text-xl text-red-600 font-semibold mb-3">{plan.percentage}</div>
-                        <p className="text-gray-600 text-sm leading-relaxed">{plan.description}</p>
+                        <p className="text-[#C7C9CD] text-sm font-sans leading-relaxed">{plan.description}</p>
                       </div>
 
-                      <ul className="space-y-3 mb-6">
+                      <ul className="space-y-3 mb-6 pt-4 border-t border-[#34373C]">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start space-x-3">
-                            <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-700 text-sm">{feature}</span>
+                            <Check className="w-4 h-4 text-amber flex-shrink-0 mt-0.5" />
+                            <span className="text-[#C7C9CD] text-sm font-sans">{feature}</span>
                           </li>
                         ))}
                       </ul>
 
                       <a href={plan.ctaLink} target="_blank" rel="noopener noreferrer" className="block">
-                        <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 text-base font-semibold rounded-lg">
+                        <Button className="w-full bg-amber hover:bg-[#d99700] text-charcoal py-3 text-base font-heading font-bold rounded-[2px] uppercase tracking-wider">
                           {plan.ctaText}
                         </Button>
                       </a>
@@ -124,7 +136,7 @@ export default function PricingSection() {
             </div>
 
             <div className="flex justify-between items-center mt-6">
-              <Button variant="outline" size="icon" onClick={prevSlide} className="bg-white/80 hover:bg-white">
+              <Button variant="outline" size="icon" onClick={prevSlide} className="bg-charcoal text-white border-[#3E4249]">
                 <ChevronLeft className="h-4 w-4" />
               </Button>
 
@@ -133,48 +145,54 @@ export default function PricingSection() {
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentSlide ? "bg-[#ec0018]" : "bg-white/50"
+                    className={`w-6 h-1.5 transition-colors rounded-[1px] ${
+                      index === currentSlide ? "bg-amber" : "bg-[#3E4249]"
                     }`}
+                    aria-label={`Plan ${index + 1}`}
                   />
                 ))}
               </div>
 
-              <Button variant="outline" size="icon" onClick={nextSlide} className="bg-white/80 hover:bg-white">
+              <Button variant="outline" size="icon" onClick={nextSlide} className="bg-charcoal text-white border-[#3E4249]">
                 <ChevronRight className="h-4 w-4" />
               </Button>
             </div>
           </div>
         </div>
 
-        {/* Desktop Grid */}
-        <div className="hidden lg:grid lg:grid-cols-3 gap-8 mb-8">
+        {/* Desktop Grid: Estilo Tickets de Trabajo */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-8 mb-14">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-xl p-8 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl border border-gray-200"
+              className="bg-charcoal rounded-[2px] p-8 border border-[#3E4249] border-t-4 border-t-amber shadow-md hover:border-amber transition-colors duration-200 flex flex-col justify-between"
             >
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{plan.title}</h3>
-                <div className="flex items-baseline mb-3">
-                  <span className="text-5xl font-bold text-gray-900">{plan.amount}</span>
-                  <span className="text-xl text-gray-600 ml-2">{plan.period}</span>
+              <div>
+                <div className="flex justify-between items-center mb-4 pb-3 border-b border-[#34373C]">
+                  <span className="text-xs font-heading font-bold text-[#9A9DA3] tracking-widest">{plan.step}</span>
+                  <div className="text-2xl font-heading font-bold text-amber">{plan.percentage}</div>
                 </div>
-                <div className="text-2xl text-red-600 font-semibold mb-4">{plan.percentage}</div>
-                <p className="text-gray-600 leading-relaxed">{plan.description}</p>
+                <div className="mb-6">
+                  <h3 className="text-2xl font-heading font-bold text-white mb-3 uppercase tracking-wide">{plan.title}</h3>
+                  <div className="flex items-baseline mb-3">
+                    <span className="text-5xl font-heading font-bold text-white">{plan.amount}</span>
+                    <span className="text-sm text-[#9A9DA3] ml-2 font-sans">{plan.period}</span>
+                  </div>
+                  <p className="text-[#C7C9CD] text-sm font-sans leading-relaxed">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-3.5 mb-8 pt-4 border-t border-[#34373C]">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-3">
+                      <Check className="w-4 h-4 text-amber flex-shrink-0 mt-0.5" />
+                      <span className="text-[#C7C9CD] text-sm font-sans">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <ul className="space-y-4 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
               <a href={plan.ctaLink} target="_blank" rel="noopener noreferrer" className="block">
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-4 text-lg font-semibold rounded-lg transform hover:scale-105 transition-all duration-200">
+                <Button className="w-full bg-amber hover:bg-[#d99700] text-charcoal py-3.5 text-base font-heading font-bold rounded-[2px] uppercase tracking-wider transition-colors duration-200">
                   {plan.ctaText}
                 </Button>
               </a>
@@ -182,8 +200,8 @@ export default function PricingSection() {
           ))}
         </div>
 
-        <div className="text-center">
-          <p className="text-gray-300 mb-6 leading-relaxed max-w-3xl mx-auto">
+        <div className="text-center pt-8 border-t border-[#34373C]">
+          <p className="text-[#C7C9CD] mb-8 leading-relaxed max-w-3xl mx-auto font-sans text-base">
             En Mecánica Loja, entendemos la inversión que representa la reparación de un motor. Por eso, te
             ofrecemos un esquema de pago flexible: una entrada para iniciar, un pago durante el proceso de arreglo y el
             saldo al momento de la contraentrega de tu vehículo con el motor como nuevo. ¡Transparencia y facilidades
@@ -193,7 +211,7 @@ export default function PricingSection() {
           <a href="#atencion-region-sur">
             <Button
               size="lg"
-              className="bg-[#ec0018] hover:bg-[#c40014] text-white px-8 py-4 text-lg font-bold rounded-lg"
+              className="bg-amber hover:bg-[#d99700] text-charcoal px-8 py-4 text-base sm:text-lg font-heading font-bold rounded-[2px] uppercase tracking-wide transition-colors duration-200"
             >
               Reservar un Turno Ahora
             </Button>
@@ -203,3 +221,4 @@ export default function PricingSection() {
     </section>
   )
 }
+

@@ -1,25 +1,29 @@
 "use client"
 
-import { CheckCircle2, Award, ShieldAlert, Cpu, Wrench, Gauge } from "lucide-react"
+import { Award, Cpu, Wrench, Gauge } from "lucide-react"
 
 export default function CamionetasSpecsSection() {
   const specs = [
     {
+      code: "SPEC 01",
       title: "Diagnóstico Computarizado para 4x4",
       desc: "Escaneo específico para cajas de transferencia, sistemas Common Rail de alta presión y sensores de tracción electrónica.",
       icon: Cpu
     },
     {
+      code: "SPEC 02",
       title: "Calibración de Inyectores y Turbocargador",
       desc: "Pruebas de entrega y retorno en banco para evitar humo negro, corregir cascabeleo y restaurar el torque de fábrica.",
       icon: Gauge
     },
     {
+      code: "SPEC 03",
       title: "Mantenimiento para Uso Rudo y Minería",
       desc: "Fluidos de alto rendimiento para diferenciales delantero/trasero, engrase de crucetas, suspensión y frenos para caminos de tercer orden.",
       icon: Wrench
     },
     {
+      code: "SPEC 04",
       title: "Modelos Especializados en Loja",
       desc: "Experiencia comprobada en Toyota Hilux (1KD/2GD), Chevrolet D-Max (4JJ1/RZ4E), Ford Ranger, Nissan Navara y Mitsubishi L200.",
       icon: Award
@@ -27,16 +31,17 @@ export default function CamionetasSpecsSection() {
   ]
 
   return (
-    <section className="py-20 bg-gray-950 text-white border-t border-b border-gray-900">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section className="py-20 lg:py-24 bg-charcoal-2 text-white border-b border-[#3A3D42]">
+      <div className="container mx-auto px-4 max-w-[1140px]">
         <div className="text-center mb-14">
-          <span className="text-red-500 font-bold text-xs uppercase tracking-widest bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
-            Tecnología para Camionetas
+          <span className="text-xs sm:text-sm font-heading font-bold text-amber tracking-widest uppercase block mb-2">
+            TECNOLOGÍA Y PARÁMETROS PARA CAMIONETAS
           </span>
-          <h2 className="text-3xl md:text-5xl font-black mt-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-bold text-white uppercase tracking-tight leading-tight max-w-2xl mx-auto">
             Servicio Especializado para Trabajo y Aventura
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mt-3 text-sm md:text-base">
+          <div className="w-12 h-[2px] bg-amber mx-auto my-4" />
+          <p className="text-sm sm:text-base text-[#9A9DA3] max-w-2xl mx-auto font-sans">
             Una camioneta sometida a carga y pendientes en la Región Sur requiere parámetros mecánicos precisos. Descubre por qué somos el taller preferido en Loja.
           </p>
         </div>
@@ -47,16 +52,19 @@ export default function CamionetasSpecsSection() {
             return (
               <div 
                 key={idx} 
-                className="bg-gray-900/80 border border-gray-800 rounded-2xl p-6 hover:border-red-500/50 hover:bg-gray-900 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-charcoal border border-[#3A3D42] border-l-[3px] border-l-amber p-6 rounded-[2px] flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-red-600/10 border border-red-500/30 flex items-center justify-center text-red-500 mb-5 group-hover:scale-110 transition-transform">
-                    <Icon className="w-6 h-6" />
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-heading font-bold text-xs text-amber tracking-wider">
+                      {item.code}
+                    </span>
+                    <Icon className="w-5 h-5 text-amber" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+                  <h3 className="text-lg font-heading font-bold text-white uppercase mb-2 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#9A9DA3] leading-relaxed font-sans">
                     {item.desc}
                   </p>
                 </div>

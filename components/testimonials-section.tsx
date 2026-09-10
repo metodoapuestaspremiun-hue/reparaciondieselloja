@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function TestimonialsSection() {
@@ -41,17 +41,23 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section className="py-16 relative overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image src="/nuevas/mecanica_en_loja_reparacion.webp" alt="Taller Mecánica Loja" fill className="object-cover" />
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+    <section className="py-20 bg-charcoal border-b border-[#34373C] text-white relative overflow-hidden">
+      {/* Patrón de fondo técnico sutil */}
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+        <Image src="/nuevas/mecanica_en_loja_reparacion.webp" alt="Taller Mecánica Loja" fill className="object-cover grayscale" />
+        <div className="absolute inset-0 bg-charcoal/90"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Clientes Satisfechos en Toda la Región Sur</h2>
-          <p className="text-lg text-gray-200 max-w-3xl mx-auto">
+      <div className="container mx-auto px-4 max-w-[1140px] relative z-10">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="text-xs sm:text-sm font-heading font-bold text-amber tracking-widest uppercase block mb-3">
+            TESTIMONIOS Y EVALUACIONES
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-bold text-white uppercase tracking-tight mb-4 leading-tight">
+            Clientes Satisfechos en Toda la Región Sur
+          </h2>
+          <div className="w-12 h-[2px] bg-amber mx-auto mb-5" />
+          <p className="text-base sm:text-lg text-[#C7C9CD] leading-relaxed font-sans">
             Conoce las experiencias de nuestros clientes y por qué confían en nosotros para el cuidado de sus vehículos, flotas y maquinaria pesada en Loja y la Región Sur.
           </p>
         </div>
@@ -65,27 +71,32 @@ export default function TestimonialsSection() {
                 style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
               >
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="bg-white bg-opacity-95 p-6 rounded-lg shadow-lg">
+                  <div key={index} className="w-full flex-shrink-0 px-2">
+                    <div className="bg-[#24272B] border border-[#3E4249] border-l-4 border-l-amber p-6 rounded-[2px] shadow-md relative">
+                      <Quote className="absolute top-4 right-4 w-6 h-6 text-[#3E4249]" />
                       <div className="flex items-center mb-4">
                         <Image
                           src={testimonial.image || "/placeholder.svg"}
                           alt={testimonial.name}
                           width={48}
                           height={48}
-                          className="w-12 h-12 rounded-full mr-4 object-cover"
+                          className="w-12 h-12 rounded-[2px] mr-4 object-cover border border-[#3E4249]"
                         />
                         <div>
-                          <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                          <div className="flex text-yellow-400">
+                          <h4 className="font-heading font-bold text-white text-base uppercase tracking-wide">{testimonial.name}</h4>
+                          <div className="flex text-amber">
                             {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-4 h-4 fill-current" />
+                              <Star key={i} className="w-3.5 h-3.5 fill-current" />
                             ))}
                           </div>
                         </div>
                       </div>
-                      <h3 className="text-lg font-semibold text-red-600 mb-2">{testimonial.title}</h3>
-                      <p className="text-gray-700 italic">"{testimonial.testimonial}"</p>
+                      <h3 className="text-xl font-heading font-bold text-amber mb-2 uppercase tracking-wide">
+                        {testimonial.title}
+                      </h3>
+                      <p className="text-[#C7C9CD] text-sm font-sans italic leading-relaxed">
+                        "{testimonial.testimonial}"
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -93,7 +104,7 @@ export default function TestimonialsSection() {
             </div>
 
             <div className="flex justify-between items-center mt-6">
-              <Button variant="outline" size="icon" onClick={prevTestimonial} className="bg-white/80 hover:bg-white">
+              <Button variant="outline" size="icon" onClick={prevTestimonial} className="bg-charcoal text-white border-[#3E4249]">
                 <ChevronLeft className="h-4 w-4" />
               </Button>
 
@@ -102,46 +113,54 @@ export default function TestimonialsSection() {
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentTestimonial ? "bg-red-500" : "bg-white/50"
+                    className={`w-6 h-1.5 transition-colors rounded-[1px] ${
+                      index === currentTestimonial ? "bg-amber" : "bg-[#3E4249]"
                     }`}
+                    aria-label={`Testimonio ${index + 1}`}
                   />
                 ))}
               </div>
 
-              <Button variant="outline" size="icon" onClick={nextTestimonial} className="bg-white/80 hover:bg-white">
+              <Button variant="outline" size="icon" onClick={nextTestimonial} className="bg-charcoal text-white border-[#3E4249]">
                 <ChevronRight className="h-4 w-4" />
               </Button>
             </div>
           </div>
         </div>
 
-        {/* Desktop Grid */}
+        {/* Desktop Grid: Fichas de Taller */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white bg-opacity-95 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
+              className="bg-[#24272B] border border-[#3E4249] border-l-4 border-l-amber p-8 rounded-[2px] shadow-sm hover:border-amber transition-colors duration-200 relative flex flex-col justify-between"
             >
-              <div className="flex items-center mb-4">
-                <Image
-                  src={testimonial.image || "/placeholder.svg"}
-                  alt={testimonial.name}
-                  width={64}
-                  height={64}
-                  className="w-16 h-16 rounded-full mr-4 object-cover"
-                />
-                <div>
-                  <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
+              <Quote className="absolute top-6 right-6 w-8 h-8 text-[#34373C]" />
+              <div>
+                <div className="flex items-center mb-6">
+                  <Image
+                    src={testimonial.image || "/placeholder.svg"}
+                    alt={testimonial.name}
+                    width={56}
+                    height={56}
+                    className="w-14 h-14 rounded-[2px] mr-4 object-cover border border-[#3E4249]"
+                  />
+                  <div>
+                    <h4 className="font-heading font-bold text-white text-base uppercase tracking-wide">{testimonial.name}</h4>
+                    <div className="flex text-amber mt-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                      ))}
+                    </div>
                   </div>
                 </div>
+                <h3 className="text-xl font-heading font-bold text-amber mb-3 uppercase tracking-wide">
+                  {testimonial.title}
+                </h3>
+                <p className="text-[#C7C9CD] text-sm font-sans italic leading-relaxed">
+                  "{testimonial.testimonial}"
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-red-600 mb-2">{testimonial.title}</h3>
-              <p className="text-gray-700 italic">"{testimonial.testimonial}"</p>
             </div>
           ))}
         </div>
@@ -149,3 +168,4 @@ export default function TestimonialsSection() {
     </section>
   )
 }
+

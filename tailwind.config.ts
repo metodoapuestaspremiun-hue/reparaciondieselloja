@@ -19,19 +19,37 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-barlow-condensed)", "sans-serif"],
+        condensed: ["var(--font-barlow-condensed)", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        charcoal: {
+          DEFAULT: "#1A1C1F",
+          2: "#24272B",
+        },
+        amber: {
+          DEFAULT: "#F2A900",
+          dim: "#B87F00",
+        },
+        offwhite: "#F1F1EF",
+        paper: "#FAFAF8",
+        ink: "#15171A",
+        ash: "#6B7178",
+        line: "#D9D9D4",
         primary: {
-          DEFAULT: "#dc2626", // red-600
-          foreground: "#ffffff",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#ec0018", // Rojo personalizado
-          foreground: "#ffffff",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

@@ -15,10 +15,10 @@ export default function WhatsAppFloat() {
     <div className="fixed bottom-6 right-4 md:right-6 z-50 w-14 h-14 md:w-16 md:h-16">
       <button
         onClick={handleWhatsAppClick}
-        className="w-full h-full bg-[#ec0018] hover:bg-[#c40014] text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center"
+        className="w-full h-full bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl hover:scale-105 transition-all duration-200 flex items-center justify-center border-2 border-white/20"
         aria-label="Contactar por WhatsApp"
       >
-        <MessageCircle className="w-8 h-8 md:w-10 md:h-10" />
+        <MessageCircle className="w-8 h-8 md:w-9 md:h-9" />
       </button>
     </div>
   )
