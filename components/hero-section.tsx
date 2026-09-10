@@ -1,4 +1,5 @@
 import Image from "next/image"
+import DomainSaleBadge from "@/components/domain-sale-badge"
 
 export default function HeroSection() {
   return (
@@ -21,6 +22,9 @@ export default function HeroSection() {
           {/* Columna Izquierda: Información técnica */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             
+            {/* Aviso de Dominio en Venta (Centro del Hero, sin H1/H2/H3, cero afectación SEO) */}
+            <DomainSaleBadge />
+
             {/* Eyebrow con línea ámbar de señalización */}
             <div className="flex items-center gap-2.5 mb-4 text-xs sm:text-sm font-semibold tracking-wider text-amber uppercase">
               <span className="w-8 h-[2px] bg-amber inline-block" />

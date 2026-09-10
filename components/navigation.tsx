@@ -38,6 +38,7 @@ export default function Navigation({ brandName = "Mecánica Loja" }: { brandName
 
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#1A1C1F] border-b border-[#000000] shadow-md">
+
       <div className="container mx-auto px-4 lg:px-6 max-w-[1180px]">
         <div className="flex justify-between items-center h-20">
           {/* Logo estilo Taller Industrial */}

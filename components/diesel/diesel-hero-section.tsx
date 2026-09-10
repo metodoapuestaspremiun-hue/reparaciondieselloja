@@ -1,4 +1,5 @@
 import Image from "next/image"
+import DomainSaleBadge from "@/components/domain-sale-badge"
 
 export default function DieselHeroSection() {
   return (
@@ -19,6 +20,9 @@ export default function DieselHeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Columna Izquierda */}
           <div className="lg:col-span-7 flex flex-col justify-center">
+            {/* Aviso de Dominio en Venta */}
+            <DomainSaleBadge />
+
             <div className="flex items-center gap-2.5 mb-4 text-xs sm:text-sm font-semibold tracking-wider text-amber uppercase">
               <span className="w-8 h-[2px] bg-amber inline-block" />
               <span>ALTA ESPECIALIZACIÓN EN MOTORES DIÉSEL</span>

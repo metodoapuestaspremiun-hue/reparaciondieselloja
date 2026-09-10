@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import BookingSection from "@/components/booking-section"
+import DomainSaleBadge from "@/components/domain-sale-badge"
 import { ShieldCheck, Clock, MapPin, CheckCircle, Wrench, Calendar, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -33,7 +34,12 @@ export default function AgendamientoPage() {
 
       {/* Hero Header para la Página de Agendamiento */}
       <section className="py-16 bg-charcoal border-b border-[#34373C]">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
+        <div className="container mx-auto px-4 max-w-5xl text-center flex flex-col items-center">
+          {/* Aviso de Dominio en Venta */}
+          <div className="w-full max-w-xl mb-4 text-left">
+            <DomainSaleBadge />
+          </div>
+
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[2px] bg-[#24272B] border border-amber/30 text-amber text-xs font-heading font-bold uppercase tracking-wider mb-4">
             <Calendar className="w-3.5 h-3.5" />
             Turnos en Tiempo Real
